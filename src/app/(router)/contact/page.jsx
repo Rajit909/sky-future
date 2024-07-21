@@ -1,7 +1,61 @@
+"use client"
 import { Clock, Mail, MapPin, PhoneCall } from "lucide-react";
-import React from "react";
+import { useRouter } from "next/navigation";
+import React, { useState } from "react";
 
 const Contact = () => {
+  const [isLoading, setIsLoading] = useState(false);
+
+  const router = useRouter();
+    const [userData, setUserData] = useState({
+      name: "",
+      email: "",
+      message: ""
+    })
+
+    const handleChange = (e)=>{
+        const {id, value} = e.target;
+        setUserData((prevData) => ({...prevData, [id]: value}))
+    }
+    console.log(userData)
+
+    const handleSubmit = async (e)=>{
+      e.preventDefault();
+      setIsLoading(true);
+      try {
+        const formData = new FormData();
+        Object.keys(userData).forEach((key) => {
+          formData.append(key, userData[key]);
+        });
+
+        const response = await fetch("/api/contact", {
+          method: "POST",
+          body: formData,
+        });
+
+        if (!response.ok) {
+          throw new Error("Network response not Found?");
+        }
+  
+        const result = await response.json();
+        if (result.success) {
+          alert(result.message);
+          Object.keys(userData).forEach((key) => {
+            setUserData((prevData) => ({ ...prevData, [key]: " " }));
+          });
+        router.push("/");
+        }else {
+          alert("Failed to submit Application.");
+        }
+      } catch (error) {
+        console.log("Error Submitting form", error);
+        alert("An error while submitting form. Please try again!");
+      } finally {
+        setIsLoading(false);
+      }
+    }
+
+
   return (
     <>
       <section className="bg-gray-100 bg-gradient-to-r from-blue-300 to-purple-500 py-10" id="contact">
@@ -78,7 +132,7 @@ const Contact = () => {
                 <h2 className="mb-4 text-2xl font-bold dark:text-white">
                   Ready to Get Started?
                 </h2>
-                <form id="contactForm">
+                <form id="contactForm" onSubmit={handleSubmit}>
                   <div className="mb-6">
                     <div className="mx-0 mb-1 sm:mb-4">
                       <div className="mx-0 mb-1 sm:mb-4">
@@ -89,10 +143,13 @@ const Contact = () => {
                         <input
                           type="text"
                           id="name"
+                          value={userData.name}
+                          onChange={handleChange}
                           autoComplete="given-name"
                           placeholder="Your name"
                           className="mb-2 w-full rounded-[5px] border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-600 sm:mb-0"
                           name="name"
+                          required
                         />
                       </div>
                       <div className="mx-0 mb-1 sm:mb-4">
@@ -103,6 +160,8 @@ const Contact = () => {
                         <input
                           type="email"
                           id="email"
+                          value={userData.email}
+                          onChange={handleChange}
                           autoComplete="email"
                           placeholder="Your email address"
                           className="mb-2 w-full rounded-[5px] border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-600 sm:mb-0"
@@ -112,13 +171,16 @@ const Contact = () => {
                     </div>
                     <div className="mx-0 mb-1 sm:mb-4">
                       <label
-                        htmlFor="textarea"
+                        htmlFor="message"
                         className="pb-1 text-xs uppercase tracking-wider"
                       ></label>
                       <textarea
-                        id="textarea"
-                        name="textarea"
+                        id="message"
+                        name="message"
+                        value={userData.message}
+                        onChange={handleChange}
                         cols="30"
+                        required
                         rows="5"
                         placeholder="Write your message..."
                         className="mb-2 w-full rounded-[5px] border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-600 sm:mb-0"
@@ -130,7 +192,18 @@ const Contact = () => {
                       type="submit"
                       className="w-full bg-blue-800 text-white px-6 py-3 font-xl rounded-[5px] sm:mb-0"
                     >
-                      Send Message
+                     {isLoading ? (
+                      <div className="text-md">
+                        <span
+                          className="spinner-border spinner-border-sm mb-1 mr-2"
+                          role="status"
+                          aria-hidden="true"
+                        ></span>
+                        Sending...
+                      </div>
+                    ) : (
+                      "Send message"
+                    )}
                     </button>
                   </div>
                 </form>

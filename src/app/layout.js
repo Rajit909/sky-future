@@ -6,8 +6,7 @@ import { AOSInit } from "@/components/ui/AOS";
 import NavBar from "./(router)/_components/Navbar/NavBar";
 import NextTopLoader from "nextjs-toploader"
 import Footer from "./(router)/_components/Footer/Footer";
-import Head from "next/head";
-import Script from "next/script";
+
 
 
 export const metadata = {
@@ -19,10 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <ClerkProvider>
       <html lang="en">
-        <Head>
-        
-
-        </Head>
+      
         <body>
         <NextTopLoader color="#000" showSpinner={false}/>
           

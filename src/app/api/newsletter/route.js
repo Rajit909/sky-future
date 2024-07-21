@@ -16,9 +16,7 @@ export async function POST(request) {
 
 
     const {
-      name,
       email,
-      message
     } = fields;
 
     console.log('EMAIL_USER:', process.env.EMAIL_USER);
@@ -40,11 +38,9 @@ export async function POST(request) {
     const mailOptions = {
       from: process.env.EMAIL_USER, // Sender address (your Hostinger email)
       to: process.env.EMAIL_TO, // Recipient address
-      subject: 'Contact request - from Sky Future Academy', // Subject line
+      subject: 'Subscribe request - from Sky Future Academy', // Subject line
       text: `
-        Name: ${name}
         Email: ${email}
-        Message: ${message}
         
       `,
     
@@ -56,7 +52,7 @@ export async function POST(request) {
     
 
     // Return a success response
-    return NextResponse.json({ success: true, message: 'Application submitted successfully!' }, { status: 200 });
+    return NextResponse.json({ success: true, message: 'Thanks to Subscribe Us!' }, { status: 200 });
   } catch (error) {
     // Log the error details for debugging
     console.error('Error in API route:', error.message);
