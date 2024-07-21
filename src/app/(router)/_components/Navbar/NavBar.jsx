@@ -9,6 +9,7 @@ import {
   CircleUserRound,
   Contact,
   Wallet,
+  PhoneCall,
 } from "lucide-react";
 import { Home } from "lucide-react";
 import { BookOpen } from "lucide-react";
@@ -188,6 +189,14 @@ const NavBar = () => {
                   <button className=" text-gray-600 font-medium text-sm px-5 text-center inline-flex gap-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 active:scale-95">
                   <Wallet />
                     <span className="hover:text-gray-500"> Installments</span>
+                  </button>
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Link href={"/contact"}>
+                  <button className=" text-gray-600 font-medium text-sm px-5 text-center inline-flex gap-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 active:scale-95">
+                  <Contact />
+                    <span className="hover:text-gray-500"> Contact Us</span>
                   </button>
                 </Link>
               </DropdownMenuItem>
