@@ -120,7 +120,7 @@ const CourseFeeCalculator = () => {
 
   return (
     <section className="bg-gray-100 bg-gradient-to-r from-blue-300 to-purple-500 p-10" >
-      <div className="container max-w-5xl rounded shadow-sm  mx-auto bg-white p-10 mt-11 " data-aos="fade-left">
+      <div className="container max-w-5xl rounded shadow-sm  mx-auto bg-gray-100 bg-gradient-to-r from-blue-200 to-purple-300 p-10 mt-11 " data-aos="fade-left">
         <h2 className="text-2xl font-extrabold text-purple-600 mb-4 text-center">
           Pay Your Course fee.
         </h2>
@@ -141,7 +141,7 @@ const CourseFeeCalculator = () => {
               onChange={handleCourseChange}
               required
             >
-              <option value="" hidden>Select Course</option>
+              <option value="" hidden >Select Course</option>
               {courses.map((course) => (
                 <option key={course.name} value={course.name}>
                   {course.name}

@@ -110,9 +110,11 @@ const NavBar = () => {
               </button>
             </Link>
           </div>
+          <Link href={"#"}>
           <BellDot className="text-gray-500 mt-2 mr-3" />
+          </Link>
 
-          {isLoaded && user ? (
+          {/* {isLoaded && user ? (
             <div className="mt-1 ">
               <UserButton afterSignOutUrl="/" />
             </div>
@@ -122,7 +124,7 @@ const NavBar = () => {
                 Get started
               </Button>
             </Link>
-          )}
+          )} */}
         </div>
         {/* for mobile */}
         <div className="lg:hidden cursor-pointer flex">
@@ -202,7 +204,7 @@ const NavBar = () => {
               </DropdownMenuItem>
 
               <DropdownMenuSeparator />
-              <DropdownMenuItem>
+              {/* <DropdownMenuItem>
                 {isLoaded && user ? (
                   <div className="mt-1 ">
                     <UserButton afterSignOutUrl="/" />
@@ -214,7 +216,7 @@ const NavBar = () => {
                     </Button>
                   </Link>
                 )}
-              </DropdownMenuItem>
+              </DropdownMenuItem> */}
             </DropdownMenuContent>
           </DropdownMenu>
         </div>

@@ -1,19 +1,39 @@
+"use client";
+import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 import Image from "next/image";
 import React from "react";
 
 import "./_components/style.css";
 
 const About = () => {
+  const words = [
+    {
+      text: "Welcome",
+    },
+    {
+      text: "to",
+    },
+    {
+      text: "Sky",
+    },
+    {
+      text: "Future",
+    },
+    {
+      text: "Academy.",
+      className: "text-blue-500 dark:text-blue-500",
+    },
+  ];
   return (
     <>
       {/* bg effect */}
       <section className="bg-gray-100 bg-gradient-to-r from-blue-300 to-purple-500 ">
       
 
-          <div className="container mx-auto py-24 px-4 sm:px-6 lg:px-8 " data-aos="fade-left">
-              <h2 className=" text-center py-8 text-4xl ">WelCome to SkyFuture Academy</h2>
+          <div className="container mx-auto py-8 px-4 sm:px-6 lg:px-8 " data-aos="fade-left">
+                           <TypewriterEffectSmooth words={words} className="text-center py-8" />
             <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
-              <div className="mt-12 md:mt-0">
+              <div className="mt-6 md:mt-0">
                 <img
                   src="https://images.unsplash.com/photo-1531973576160-7125cd663d86"
                   alt="About Us Image"
