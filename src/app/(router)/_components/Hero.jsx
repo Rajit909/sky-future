@@ -33,24 +33,16 @@ const Hero = () => {
     <div className=' h-96 md:h-[600px] mt-[73px]'>
         <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
         <SwiperSlide>
-          <Image fill={true} src={images[6]} alt="image1" className="h-96 w-full object-cover" />
-          {/* text to show */}
-          <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-purple-600">
-            <h1 className="text-xl font-bold ">Welcome to Sky Future</h1>
-          </div>
+          <Image fill={true} src={images[6]} alt="image1" className="w-full object-cover" />
+          
         </SwiperSlide>
         <SwiperSlide>
           <Image fill={true} src={images[7]} alt="image1" className="h-96 w-full object-cover" />
-          {/* text to show */}
-          <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-purple-600">
-            <h1 className="text-xl font-bold">Welcome to Sky Future</h1>
-          </div>
+          
         </SwiperSlide>
         <SwiperSlide>
           <Image fill={true} src={images[8]} alt="image1" className="h-96 w-full object-cover" />
-              <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-purple-600">
-            <h1 className="text-xl font-bold">Welcome to Sky Future</h1>
-          </div>
+            
         </SwiperSlide>
        
       </Swiper>
