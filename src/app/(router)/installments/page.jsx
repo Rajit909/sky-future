@@ -55,7 +55,7 @@ const CourseFeeCalculator = () => {
   };
 
   const fetchEmiOptions = (amount) => {
-    const emiOptions = [{ duration: 3 }, { duration: 6 }, { duration: 9 }];
+    const emiOptions = [{ duration: 3 }];
 
     setEmiOptions(emiOptions);
   };
@@ -173,7 +173,7 @@ const CourseFeeCalculator = () => {
               value={selectedEmi}
               onChange={handleEmiChange}
             >
-              <option value="">Select EMI Option</option>
+              <option hidden>Select EMI Option</option>
               {emiOptions.map((option) => (
                 <option key={option.duration} value={option.duration}>
                   {option.duration} months

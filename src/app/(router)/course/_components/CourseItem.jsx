@@ -11,7 +11,7 @@ const CourseItem = ({ url, name, desc, time }) => {
           <a href="#" className="group relative flex items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg">
             <Image
               className="h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
-              src={url}
+              src={url}q
               alt="Sunset in the mountains"
               width={300}
               height={200}
@@ -34,7 +34,7 @@ const CourseItem = ({ url, name, desc, time }) => {
             className="py-1 text-sm font-regular text-gray-900 mr-1 flex flex-row items-center"
           >
             <Clock10 />
-            <span className="ml-1">{time}</span>
+            <span className="ml-1">{time} Months</span>
           </span>
         </div>
       </div>

@@ -43,7 +43,7 @@ const Hero = () => {
         </SwiperSlide>
         <SwiperSlide>
           <Image fill={true} src={images[2]} alt="image1" className="h-96 w-full object-cover" />
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
+          <div className="absolute top-2/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
             <h1 className="text-white text-4xl md:text-6xl font-bold">Welcome to Sky Future</h1>
             <p className="text-white text-lg md:text-2xl">We are here to serve you</p>
           </div>
