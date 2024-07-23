@@ -34,6 +34,20 @@ export async function POST(request) {
         fields[key] = value;
       }
     }
+ // Define size limits for each file type
+ const sizeLimits = {
+  photo: 20 * 1024, // 100 KB
+  aadhar: 50 * 1024, // 150 KB
+  highmark: 100 * 1024, // 200 KB
+  intermark: 100 * 1024, // 250 KB
+};
+
+// Validate file sizes
+for (const key in files) {
+  if (files[key].size > sizeLimits[key]) {
+    return NextResponse.json({ error: `${key} exceeds ${sizeLimits[key] / 1024} KB limit.` }, { status: 400 });
+  }
+}
 
     // Upload files and get their URLs
     const photoUrl = await uploadFile(files['photo']);

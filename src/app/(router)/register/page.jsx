@@ -27,24 +27,24 @@ const Register = () => {
 
   console.log(userData);
 
-  const handlePhotofileChange = (e) => {
+  const handleFileChange = (e, setFile, maxSize)=>{
     const file = e.target.files[0];
-    setPhotoFile(file);
-  };
-  const handleAadharfileChange = (e) => {
-    const file = e.target.files[0];
-    setAadharFile(file);
-  };
-  console.log(aadharFile)
-  const handleHighmarkfileChange = (e) => {
-    const file = e.target.files[0];
-    setHighmarkFile(file);
-  };
-  const handleIntermarkfileChange = (e) => {
-    const file = e.target.files[0];
-    setIntermarkFile(file);
-  };
+    if(file.size > maxSize){
+      alert(`File size exceeds ${maxSize / 1024} KB limit. Please choose a smaller file.`);
+      e.target.value = null;
+    }else{
+      setFile(file);
+    }
+  }
 
+  const handlePhotofileChange = (e) => handleFileChange(e, setPhotoFile, 20 * 1024);
+
+  const handleAadharfileChange = (e) => handleFileChange(e, setAadharFile, 50 * 1024);
+
+  const handleHighmarkfileChange = (e) => handleFileChange(e, setHighmarkFile, 100 * 1024);
+
+  const handleIntermarkfileChange = (e) => handleFileChange(e, setIntermarkFile, 100 * 1024);
+  
   const handleChange = (e) => {
     const { id, value } = e.target;
     setUserData((prevData) => ({ ...prevData, [id]: value }));
@@ -171,6 +171,7 @@ const Register = () => {
                     name="gender"
                     value={userData.gender}
                     onChange={handleChange}
+                    required
                   >
                     <option hidden>Select Gender</option>
                     <option value="Female">Female</option>
@@ -203,6 +204,7 @@ const Register = () => {
                     id="qfn"
                     value={userData.qfn}
                     onChange={handleChange}
+                    required
                   >
                     <option hidden>Select Qualification</option>
                     <option value="High School">High School</option>
@@ -230,6 +232,7 @@ const Register = () => {
                       id="highmark"
                       name="highmark"
                       onChange={handleHighmarkfileChange}
+                      required
                     />
                   </div>
                   <div className="p-4 bg-gray-200 rounded">
@@ -239,6 +242,7 @@ const Register = () => {
                       id="intermark"
                       name="intermark"
                       onChange={handleIntermarkfileChange}
+                      required
                     />
                   </div>
                   <div className="p-4 bg-gray-200 rounded">
@@ -248,6 +252,7 @@ const Register = () => {
                       id="photo"
                       name="photo"
                       onChange={handlePhotofileChange}
+                      required
                     />
                   </div>
 
@@ -259,6 +264,7 @@ const Register = () => {
                     onChange={handleChange}
                     cols="45"
                     rows="5"
+                    required
                     placeholder="Enter your address"
                   ></textarea>
 
@@ -268,6 +274,7 @@ const Register = () => {
                     name="state"
                     value={userData.state}
                     onChange={handleChange}
+                    required
                   >
                     <option hidden>Select State</option>
                     <option value="ANDHRA PRADESH">ANDHRA PRADESH</option>
