@@ -5,20 +5,20 @@ import { Bell, FireExtinguisher, Handshake, Hospital, Navigation, PlaneTakeoff, 
 const Services = () => {
   return (
     <>
-      <div className="" data-aos="fade-right">
+      <div className=""  data-aos="fade-right" >
         <section
           id="features"
-          className="relative block px-6 py-10 md:py-20 md:px-10 bg-gray-100 bg-gradient-to-r from-blue-300 to-purple-500"
+          className=" block px-6 py-10 md:py-20 md:px-10 "
         >
-          <div className="relative mx-auto max-w-5xl text-center">
+          <div className="relative mx-auto max-w-5xl text-center" >
             <span className="text-gray-700 font-semibold my-3 flex items-center justify-center uppercase tracking-wider">
               WHAT WE DO
             </span>
-            <h2 className="block w-full bg-gradient-to-b from-white to-gray-200 bg-clip-text font-bold text-transparent text-xl sm:text-2xl">
+            <h2 className="block w-full bg-gradient-to-b from-white to-black bg-clip-text font-bold text-transparent text-xl sm:text-2xl">
               OUR SERVICES
             </h2>
             <p
-            className="mx-auto my-4 w-full max-w-xl bg-transparent text-center font-medium leading-relaxed tracking-wide font-semibold bg-gradient-to-r from-black to-orange-400 bg-clip-text text-transparent">
+            className="mx-auto my-4 w-full max-w-xl bg-transparent text-center leading-relaxed tracking-wide font-semibold bg-gradient-to-r from-black to-orange-400 bg-clip-text text-transparent">
             BEST INSTITUTE TO BUILD CAREER IN
         </p>
           </div>
