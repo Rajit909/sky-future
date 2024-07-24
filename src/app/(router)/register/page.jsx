@@ -227,6 +227,7 @@ const Register = () => {
                       type="file"
                       id="highmark"
                       name="highmark"
+                      accept=".jpg, .jpeg, .png, .pdf"
                       onChange={handleHighmarkfileChange}
                       required
                     />
@@ -237,6 +238,7 @@ const Register = () => {
                       type="file"
                       id="intermark"
                       name="intermark"
+                      accept=".jpg, .jpeg, .png, .pdf"
                       onChange={handleIntermarkfileChange}
                       required
                     />
