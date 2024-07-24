@@ -18,6 +18,7 @@ const Register = () => {
     gender: "",
     email: "",
     phone: "",
+    aadhar:"",
     qfn: "",
     address: "",
     state: "",
@@ -37,9 +38,7 @@ const Register = () => {
     }
   }
 
-  const handlePhotofileChange = (e) => handleFileChange(e, setPhotoFile, 20 * 1024);
 
-  const handleAadharfileChange = (e) => handleFileChange(e, setAadharFile, 50 * 1024);
 
   const handleHighmarkfileChange = (e) => handleFileChange(e, setHighmarkFile, 100 * 1024);
 
@@ -55,8 +54,6 @@ const Register = () => {
     setIsLoading(true);
     try {
       const formData = new FormData();
-      formData.append("photo", photoFile);
-      formData.append("aadhar", aadharFile);
       formData.append("highmark", highmarkFile);
       formData.append("intermark", intermarkFile);
       Object.keys(userData).forEach((key) => {
@@ -78,8 +75,6 @@ const Register = () => {
         Object.keys(userData).forEach((key) => {
           setUserData((prevData) => ({ ...prevData, [key]: " " }));
         });
-        setPhotoFile("");
-        setAadharFile("");
         setHighmarkFile("");
         setIntermarkFile("");
 
@@ -198,8 +193,18 @@ const Register = () => {
                     placeholder="Phone"
                     required
                   />
+                  <input
+                    type="text"
+                    className="form-control border-0 p-4 rounded"
+                    name="aadhar"
+                    id="aadhar"
+                    value={userData.aadhar}
+                    onChange={handleChange}
+                    placeholder="Aadhar no."
+                    required
+                  />
                   <select
-                    className="form-control border-0 px-4 rounded h-12 md:col-span-2"
+                    className="form-control border-0 px-4 rounded h-12"
                     name="qfn"
                     id="qfn"
                     value={userData.qfn}
@@ -213,16 +218,7 @@ const Register = () => {
                     <option value="Graduation">Graduation</option>
                     <option value="Post-Graduation">Post-Graduation</option>
                   </select>
-                  <div className="p-4 bg-gray-200 rounded">
-                    <h6 className="mb-2">Upload Aadhar</h6>
-                    <input
-                      type="file"
-                      id="aadhar"
-                      name="aadhar"
-                      onChange={handleAadharfileChange}
-                      required
-                    />
-                  </div>
+                  
                   <div className="p-4 bg-gray-200 rounded">
                     <h6 className="mb-2">
                       10<sup>th</sup> MarkSheet
@@ -245,18 +241,7 @@ const Register = () => {
                       required
                     />
                   </div>
-                  <div className="p-4 bg-gray-200 rounded">
-                    <h6 className="mb-2">Upload Photo</h6>
-                    <input
-                      type="file"
-                      id="photo"
-                      name="photo"
-                      onChange={handlePhotofileChange}
-                      required
-                    />
-                  </div>
-
-                  <textarea
+                    <textarea
                     className="form-control border-0 p-4 rounded md:col-span-2"
                     id="address"
                     name="address"

@@ -36,8 +36,6 @@ export async function POST(request) {
     }
  // Define size limits for each file type
  const sizeLimits = {
-  photo: 20 * 1024, // 100 KB
-  aadhar: 50 * 1024, // 150 KB
   highmark: 100 * 1024, // 200 KB
   intermark: 100 * 1024, // 250 KB
 };
@@ -50,8 +48,6 @@ for (const key in files) {
 }
 
     // Upload files and get their URLs
-    const photoUrl = await uploadFile(files['photo']);
-    const aadharUrl = await uploadFile(files['aadhar']);
     const highmarkUrl = await uploadFile(files['highmark']);
     const intermarkUrl = await uploadFile(files['intermark']);
 
@@ -62,6 +58,7 @@ for (const key in files) {
       gender,
       email,
       phone,
+      aadhar,
       qfn,
       address,
       state,
@@ -96,6 +93,7 @@ for (const key in files) {
         Gender: ${gender}
         Email: ${email}
         Phone No. : ${phone}
+        Aadahr No. : ${aadhar}
         Qualification: ${qfn}          
         Adderess: ${address}
         State: ${state}
@@ -103,14 +101,6 @@ for (const key in files) {
         Course: ${course}
       `,
       attachments: [
-        {
-          filename: files['photo'].name,
-          path: photoUrl,
-        },
-        {
-          filename: files['aadhar'].name,
-          path: aadharUrl,
-        },
         {
           filename: files['highmark'].name,
           path: highmarkUrl,
