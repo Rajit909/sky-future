@@ -31,7 +31,7 @@ const Register = () => {
   const handleFileChange = (e, setFile, maxSize)=>{
     const file = e.target.files[0];
     if(file.size > maxSize){
-      alert(`File size exceeds ${maxSize / 1024} KB limit. Please choose a smaller file.`);
+      alert(`फ़ाइल का Size ${maxSize / 1024}KB से अधिक है. कृपया 400kb से कम की फ़ाइल अपलोड करें।.`);
       e.target.value = null;
     }else{
       setFile(file);
