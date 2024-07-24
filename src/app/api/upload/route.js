@@ -36,8 +36,8 @@ export async function POST(request) {
     }
  // Define size limits for each file type
  const sizeLimits = {
-  highmark: 100 * 1024, // 200 KB
-  intermark: 100 * 1024, // 250 KB
+  highmark: 400 * 1024, // 200 KB
+  intermark: 400 * 1024, // 250 KB
 };
 
 // Validate file sizes

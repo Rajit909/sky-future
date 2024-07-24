@@ -40,9 +40,9 @@ const Register = () => {
 
 
 
-  const handleHighmarkfileChange = (e) => handleFileChange(e, setHighmarkFile, 100 * 1024);
+  const handleHighmarkfileChange = (e) => handleFileChange(e, setHighmarkFile, 400 * 1024);
 
-  const handleIntermarkfileChange = (e) => handleFileChange(e, setIntermarkFile, 100 * 1024);
+  const handleIntermarkfileChange = (e) => handleFileChange(e, setIntermarkFile, 400 * 1024);
   
   const handleChange = (e) => {
     const { id, value } = e.target;
