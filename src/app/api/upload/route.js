@@ -14,7 +14,7 @@ async function uploadFile(file) {
   const response = await put(file.name, file,{
     access: "public"
   })
-  console.log(response)
+  // console.log(response)
   return (response.url); // Return the URL of the uploaded file
 }
 
