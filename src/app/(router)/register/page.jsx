@@ -188,16 +188,19 @@ const Register = () => {
                     className="form-control border-0 p-4 rounded"
                     name="phone"
                     id="phone"
+                    pattern="[0-9]{10}"
                     value={userData.phone}
                     onChange={handleChange}
                     placeholder="Phone"
                     required
                   />
+                  
                   <input
                     type="text"
                     className="form-control border-0 p-4 rounded"
                     name="aadhar"
                     id="aadhar"
+                    pattern="[0-9]{12}"
                     value={userData.aadhar}
                     onChange={handleChange}
                     placeholder="Aadhar no."
@@ -308,7 +311,9 @@ const Register = () => {
                     className="form-control border-0 p-3 rounded"
                     id="country"
                     name="country"
+                    pattern="[A-Za-z\s\-]{2,}" 
                     value={userData.country}
+                    title="Country names should only contain letters, spaces, and hyphens." 
                     onChange={handleChange}
                     placeholder="Country"
                     required
@@ -319,6 +324,7 @@ const Register = () => {
                     name="course"
                     value={userData.course}
                     onChange={handleChange}
+                    required
                   >
                     <option hidden>Select course</option>
                           <option value="Diploma in Hotel Management">
