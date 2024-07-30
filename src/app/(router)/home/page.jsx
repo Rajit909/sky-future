@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Hero from "../_components/Hero";
-import About from "../about/page";
+import About from "../about-us/page";
 import Services from "../servises/page";
 import Newsletter from "../_components/Newsletter";
 import PLacements from "../_components/Partners/PLacements";
