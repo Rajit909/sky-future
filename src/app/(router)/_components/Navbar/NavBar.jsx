@@ -162,7 +162,7 @@ const NavBar = () => {
               </DropdownMenuItem>
               {/* <DropdownMenuSeparator /> */}
               <DropdownMenuItem className="cursor-pointer">
-                <Link href={"/about"}>
+                <Link href={"/about-us"}>
                   <button className=" text-gray-600 font-medium text-sm px-5 text-center inline-flex gap-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 active:scale-95">
                     <Info />
                     <span className="hover:text-gray-500"> About</span>
