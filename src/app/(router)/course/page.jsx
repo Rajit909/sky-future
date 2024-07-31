@@ -18,7 +18,6 @@ const Course = () => {
     <>
       <div
         className="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16 mt-16 "
-        data-aos="fade-right"
       >
         <div className="relative mx-auto max-w-5xl text-center">
           <h2 className="block shadow-sm w-full bg-gradient-to-b from-white to-gray-400 bg-clip-text font-bold text-4xl sm:text-2xl">

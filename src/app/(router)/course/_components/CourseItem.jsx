@@ -5,7 +5,7 @@ import React from "react";
 const CourseItem = ({ url, name, desc, time }) => {
   return (
     <>
-      <div className="rounded overflow-hidden shadow-lg">
+      <div className="rounded overflow-hidden shadow-lg" data-aos="fade-up" data-aos-ease="ease-in">
         <a href="#"></a>
         <div className="relative">
           <a href="#" className="group relative flex items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg">

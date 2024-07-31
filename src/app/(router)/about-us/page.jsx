@@ -30,17 +30,17 @@ const About = () => {
       <section className="bg-gray-100 bg-gradient-to-r from-blue-300 to-purple-500 ">
       
 
-          <div className="container mx-auto py-8 px-4 sm:px-6 lg:px-8 " data-aos="fade-left">
+          <div className="container mx-auto py-8 px-4 sm:px-6 lg:px-8 ">
                            <TypewriterEffectSmooth words={words} className="text-center py-8" />
             <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
-              <div className="mt-6 md:mt-0">
+              <div className="mt-6 md:mt-0" data-aos="fade-up" data-aos-ease="ease-in">
                 <img
                   src="https://images.unsplash.com/photo-1531973576160-7125cd663d86"
                   alt="About Us Image"
                   className="object-cover rounded-xl shadow-md"
                 />
               </div>
-              <div className="max-w-lg">
+              <div className="max-w-lg" data-aos="fade-up" data-aos-ease="ease-in">
                 <h2 className=" cursor-pointer text-3xl font-extrabold text-gray-900 sm:text-4xl">
                   About Us
                 </h2>
