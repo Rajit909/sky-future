@@ -26,7 +26,7 @@ const Hero = () => {
           
         "/images/slider/portrait-flight.jpg",
         "/images/slider/slider-13.jpg",
-        "/images/slider/slider-17.jpg",
+        "/images/slider/slider-5.jpeg",
         "/images/slider/slider3.jpg",
       ];
   return (
@@ -42,17 +42,13 @@ const Hero = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <Image fill={true} src={images[2]} alt="image1" className="h-96 w-full object-cover" />
+          <Image fill={true} src={images[2]} alt="image1" className="object-cover" style={{width:"100%"}} />
           <div className="absolute top-2/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
-            <h1 className="text-white text-4xl md:text-6xl font-bold">Welcome to Sky Future</h1>
-            <p className="text-white text-lg md:text-2xl">We are here to serve you</p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <Image fill={true} src={images[3]} alt="image1" className="h-96 w-full object-cover" />
           <div className="absolute top-2/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
-            <h1 className="text-white text-4xl md:text-6xl font-bold">Welcome to Sky Future</h1>
-            <p className="text-white text-lg md:text-2xl">We are here to serve you</p>
           </div>
         </SwiperSlide>
        
