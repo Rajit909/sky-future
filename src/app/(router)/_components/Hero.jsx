@@ -26,7 +26,7 @@ const Hero = () => {
           
         "/images/slider/portrait-flight.jpg",
         "/images/slider/slider-13.jpg",
-        "/images/slider/slider-5.jpeg",
+        "/images/slider/slider-5.jpg",
         "/images/slider/slider3.jpg",
       ];
   return (
