@@ -106,13 +106,32 @@ const Footer = () => {
                       <MapPin color="white" />
                     </div>
                     <h2 className="text-white pl-4 font-semibold">
-                      Our Address
+                      Our Address 1
                     </h2>
                   </div>
                   <p className=" text-gray-300 pl-16">
                     Gandhi puram near mini bypass road, izzatnager Bareilly ,
                     Uttar Pradesh , 243122
                   </p>
+                 
+                  
+                 
+                </div>
+                <div className="">
+                  <div className="flex items-center p-2">
+                    <div className=" bg-blue-600 p-2 rounded-[5px]">
+                      <MapPin color="white" />
+                    </div>
+                    <h2 className="text-white pl-4 font-semibold">
+                      Our Address 2
+                    </h2>
+                  </div>
+                  <p className=" text-gray-300 pl-16">
+                    D-242, Sector-63, Gautam Budh Nagar, Noida Uttar Pradesh, 201301 
+                  </p>
+                 
+                  
+                 
                 </div>
 
                 <div className="mt-3">
