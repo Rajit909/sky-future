@@ -35,9 +35,10 @@ const About = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
               <div className="mt-6 md:mt-0" data-aos="fade-up" data-aos-ease="ease-in">
                 <img
-                  src="https://images.unsplash.com/photo-1531973576160-7125cd663d86"
+                  src="/images/about/about.jpg"
                   alt="About Us Image"
                   className="object-cover rounded-xl shadow-md"
+                  style={{maxHeight: "500px", width: "100%"}}
                 />
               </div>
               <div className="max-w-lg" data-aos="fade-up" data-aos-ease="ease-in">
