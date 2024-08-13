@@ -164,7 +164,7 @@ const Footer = () => {
                       <Mail color="white" />
                     </div>
                     <h2 className="text-gray-300 pl-4 ">
-                      hr@skyfutureacademy.com
+                      info@skyfutureacademy.com
                     </h2>
                   </div>
                 </div>

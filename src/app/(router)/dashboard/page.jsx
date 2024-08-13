@@ -24,7 +24,7 @@ const Dashboard = () => {
   }, [user])
 
   return (
-    <div className=" grid grid-cols-1 md:grid-cols-4">
+    <div className=" grid grid-cols-1 md:grid-cols-4 my-20">
     {/* left section */}
     <div className="col-span-3">
       {/* welcome banner */}

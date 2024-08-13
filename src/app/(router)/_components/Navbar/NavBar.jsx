@@ -204,7 +204,7 @@ const NavBar = () => {
               </DropdownMenuItem>
 
               <DropdownMenuSeparator />
-              {/* <DropdownMenuItem>
+               {/* <DropdownMenuItem>
                 {isLoaded && user ? (
                   <div className="mt-1 ">
                     <UserButton afterSignOutUrl="/" />
@@ -216,8 +216,8 @@ const NavBar = () => {
                     </Button>
                   </Link>
                 )}
-              </DropdownMenuItem> */}
-            </DropdownMenuContent>
+              </DropdownMenuItem>  */}
+            </DropdownMenuContent> 
           </DropdownMenu>
         </div>
       </nav>
