@@ -10,7 +10,7 @@ import Footer from "./(router)/_components/Footer/Footer";
 
 
 export const metadata = {
-  title: "Sky Futuer Aviation Academy",
+  title: "Sky Future Aviation Academy",
   Script: "Fly in the Sky!",
 };
 
