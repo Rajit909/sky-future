@@ -193,6 +193,7 @@ const Footer = () => {
                   width={70}
                   height={70}
                   className=" rounded transition-all hover:scale-150"
+                  style={{width: "auto", height: "auto"}}
                 />
               </a>
               <span className="text-gray-400  block">

@@ -10,12 +10,17 @@ async function uploadFile(file) {
 //   fs.writeFileSync(filePath, bytes);
 //   return filePath;
 
-
+try {
   const response = await put(file.name, file,{
     access: "public"
   })
-  // console.log(response)
+  console.log(response.url)
   return (response.url); // Return the URL of the uploaded file
+} catch (error) {
+  console.log('Error uploading file:', error);
+  throw new Error('Error uploading file');
+}
+  
 }
 
 // Named export for the POST method

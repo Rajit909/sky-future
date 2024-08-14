@@ -3,8 +3,6 @@ import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
 const Register = () => {
-  const [photoFile, setPhotoFile] = useState(null);
-  const [aadharFile, setAadharFile] = useState(null);
   const [highmarkFile, setHighmarkFile] = useState(null);
   const [intermarkFile, setIntermarkFile] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -54,10 +52,10 @@ const Register = () => {
     setIsLoading(true);
     try {
       const formData = new FormData();
-      formData.append("highmark", highmarkFile);
-      formData.append("intermark", intermarkFile);
+      if(highmarkFile) formData.append("highmark", highmarkFile);
+      if(intermarkFile) formData.append("intermark", intermarkFile);
       Object.keys(userData).forEach((key) => {
-        formData.append(key, userData[key]);
+        if(userData[key]) formData.append(key, userData[key]);
       });
 
       const response = await fetch("/api/upload", {
@@ -81,10 +79,10 @@ const Register = () => {
         // Redirect to payment page
         router.push("/payment");
       } else {
-        alert("Failed to submit Application.");
+        alert(result.error ||"Failed to submit Application.");
       }
     } catch (error) {
-      console.log("Error Submitting form", error);
+      console.error("Error Submitting form", error);
       alert("An error while submitting form. Please try again!");
     } finally {
       setIsLoading(false);

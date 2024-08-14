@@ -11,7 +11,7 @@ const CourseItem = ({ url, name, desc, time }) => {
           <a href="#" className="group relative flex items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg">
             <Image
               className="h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
-              src={url}q
+              src={url}
               alt="Sunset in the mountains"
               width={300}
               height={200}

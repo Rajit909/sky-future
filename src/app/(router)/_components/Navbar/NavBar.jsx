@@ -40,7 +40,6 @@ const NavBar = () => {
             src={"/images/logo/logo.png"}
             alt="logos"
           />
-          {/* <h1 className="text-xl font-bold">Beaginner teck stack</h1> */}
         </Link>
 
         {/* for desktop */}
