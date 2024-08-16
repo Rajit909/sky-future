@@ -27,17 +27,19 @@ const Payment = () => {
                     </span>
                   </p>
                   <div className="mt-10 block w-full rounded-[8px] bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                    
+                    
                     <form>
                       <script
                         src="https://checkout.razorpay.com/v1/payment-button.js"
-                        data-payment_button_id="pl_OUtcauz5NzSerU"
+                        data-payment_button_id="pl_OlVXyLLP861uH0"
                         async=""
                       >
                         {" "}
                       </script>{" "}
                       <span className="razorpay-payment-button svelte-ohbfj8">
                         <a
-                          href="https://razorpay.com/payment-button/pl_OUtcauz5NzSerU/view/?utm_source=payment_button&amp;utm_medium=button&amp;utm_campaign=payment_button"
+                          href="https://razorpay.com/payment-button/pl_OlVXyLLP861uH0/view/?utm_source=payment_button&amp;utm_medium=button&amp;utm_campaign=payment_button"
                           type="submit"
                           className="PaymentButton PaymentButton--light PaymentButton--rzpTheme PaymentButton--rzp-light-standard svelte-ekc7fv"
                         >
@@ -69,7 +71,9 @@ const Payment = () => {
                             </div>
                           </div>
                         </a>
+
                       </span>
+  
                     </form>
                   </div>
                   <p className="mt-6 text-xs leading-5 text-gray-600">
