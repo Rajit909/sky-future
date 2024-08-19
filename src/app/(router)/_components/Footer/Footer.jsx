@@ -127,7 +127,7 @@ const Footer = () => {
                     </h2>
                   </div>
                   <p className=" text-gray-300 pl-16">
-                    D-242, Sector-63, Gautam Budh Nagar, Noida Uttar Pradesh, 201301 
+                    D, Sector-63, Gautam Budh Nagar, Noida Uttar Pradesh, 201301 
                   </p>
                  
                   
