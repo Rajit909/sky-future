@@ -143,6 +143,7 @@ const Footer = () => {
                     <h2 className="text-white pl-4 font-semibold">Contact</h2>
                   </div>
                   <p className=" text-gray-300 pl-16">+91 9718273445</p>
+                  <p className=" text-gray-300 pl-16">+91 8979381700</p>
                 </div>
 
                 {/* <div className=" mt-3">
