@@ -130,6 +130,6 @@ for (const key in files) {
     console.error('Full error details:', error);
 
     // Return an error response
-    return NextResponse.json({ error: 'Error sending email.' }, { status: 500 });
+    return NextResponse.json({ error: 'Error sending email!, Invalid login.' }, { status: 500 });
   }
 }
