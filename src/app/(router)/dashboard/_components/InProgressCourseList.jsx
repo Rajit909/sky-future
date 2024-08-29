@@ -12,8 +12,8 @@ const InProgressCourseList = ({userEnrolledCourses}) => {
           {userEnrolledCourses?.length > 0 ?
           
             userEnrolledCourses.map((course, index) => (
-              <div className='grid grid-cols-1 lg:grid-cols-3 justify-center items-center gap-5 mx-5 mt-10 m-5 px-8'>
-              <ProgressCourseItem key={index} course={course}/>
+              <div key={index} className='grid grid-cols-1 lg:grid-cols-3 justify-center items-center gap-5 mx-5 mt-10 m-5 px-8'>
+              <ProgressCourseItem  course={course}/>
         </div>
             )):
             // first five seconds show loading and then show no course
