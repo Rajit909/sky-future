@@ -119,7 +119,7 @@ const Footer = () => {
                     </h2>
                   </div>
                   <p className=" text-gray-300 pl-16">
-                    D-242, Sector-63, Gautam Budh Nagar, Noida Uttar Pradesh, 201301 
+                    D, Sector-63, Gautam Budh Nagar, Noida Uttar Pradesh, 201301 
                   </p>
                  
                   
@@ -136,6 +136,7 @@ const Footer = () => {
                   </div>
                   <p className=" text-gray-300 pl-16">+91 9718273445 </p>
                   <p className="text-gray-300 pl-16">+91 8979381700</p>
+                  <p className=" text-gray-300 pl-16">+91 8979381700</p>
                 </div>
 
                 {/* <div className=" mt-3">
