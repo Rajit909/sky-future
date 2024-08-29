@@ -126,7 +126,7 @@ const NavBar = () => {
                 <DialogDescription>
                 Subscribe now to get notified about exclusive offers from us.
                 </DialogDescription>
-                <div className="flex items-center justify-center max-w-md pl-4 " style={{maxHeight:"380px"}}>
+                <div className="flex items-center justify-center max-w-md pl-4 " style={{maxHeight:"400px"}}>
                 <Newsletter/>
                 </div>
 
