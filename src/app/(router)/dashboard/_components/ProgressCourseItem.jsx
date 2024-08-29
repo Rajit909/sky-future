@@ -1,4 +1,6 @@
 "use client";
+import { Button } from "@/components/ui/button";
+import { Clock10 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -10,7 +12,7 @@ const ProgressCourseItem = ({ course }) => {
   }
   return (
     <Link href={"/course_preview/"+course?.courseList?.slug}>
-    <div className="bg-white border rounded-xl hover:shadow-md cursor-pointer hover:shadow-purple-300">
+    <div className="bg-white border rounded-xl shadow-md hover:shadow-md cursor-pointer hover:shadow-purple-300">
       <div>
         <Image
           src={course.courseList?.banner?.url}
@@ -22,25 +24,32 @@ const ProgressCourseItem = ({ course }) => {
       </div>
       <div className="flex flex-col gap-5 p-3">
         <h2 className="font-medium">{course.courseList?.name}</h2>
-        <h2 className="text-[12px] text-gray-400">
+        {/* <h2 className="text-[12px] text-gray-400">
           {course.courseList?.author}
-        </h2>
+        </h2> */}
 
-        <div className="flex items-center gap-5">
-          <Image
+        <div className="flex items-center juc gap-5">
+          {/* <Image
             src="/images/chapter.jfif"
             width={30}
             height={30}
             alt="chapter"
-          />
-          <h2 className="font-medium text-sm ">
-            Total Chapters: {course.courseList?.totalChapters}{" "}
+          /> */}
+          <Clock10/>
+          <h2 className="font-medium text-sm mb-4 ">
+            {/* Total Chapters: {(course.courseList?.totalChapters)} */}
+            (3 months)
           </h2>
         </div>
-        <h2 className="text-[12px] text-gray-400">
-          {getTotalCompletedChapterPerc(course)}% <span className="float-right">{course?.completedChapter?.length}/{course?.courseList?.chapter?.length} Chapters</span>
+        <div className="flex items-center gap-5 cursor-pointer">
+          <Button variant="outline" className="rounded-[5px] font-bold">
+           continue learning
+          </Button>
+        </div>
+        {/* <h2 className="text-[12px] text-gray-400">
+          {getTotalCompletedChapterPerc(course)}% <span className="float-right">{course?.completedChapter?.length}/{course.courseList?.totalChapters} Chapters</span>
         </h2>
-        <input type="range" name="progress" id="progress" value={getTotalCompletedChapterPerc(course)} />
+        <input type="range" name="progress" id="progress" value={getTotalCompletedChapterPerc(course)} /> */}
       </div>
     </div>
     </Link>

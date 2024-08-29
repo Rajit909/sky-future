@@ -25,6 +25,7 @@ const CoursePreview = ({ params }) => {
   GlobalApi.getCourseById(params?.courseId).then((res) => {
     console.log(res);
     setCourseInfo(res?.courseList);
+    console.log("course_previw",res?.courseList);
   });
 }, [params]);
 
@@ -43,7 +44,7 @@ const CoursePreview = ({ params }) => {
 
   return (
     courseInfo && (
-      <div>
+      <div className="pt-24">
         <div className="grid grid-col-1 md:grid-cols-3 p-5 gap-3">
               {/* video desc & title */}
           <div className="col-span-2 bg-white">

@@ -13,7 +13,12 @@ const getAllCourseList = async () => {
         name
         id
         free
-        description
+        description{
+           text
+        html
+        raw
+        markdown
+        }
         demoUrl
         banner {
           url
@@ -64,7 +69,7 @@ const getCourseById = async (courseId) => {
       banner {
         url
       }
-      chapter {
+      chapter(first:20) {
         ... on Chapter {
           id
           name
@@ -72,7 +77,12 @@ const getCourseById = async (courseId) => {
         }
       }
       demoUrl
-      description
+      description{
+         text
+      html
+      raw
+      markdown
+      }
       free
       id
       name
@@ -141,16 +151,22 @@ const getUserEnrolledCourseDetails = async (id, email) => {
         banner {
           url
         }
-        chapter {
+        chapter (first:20){
           ... on Chapter {
             id
             name
             shortDesc
             video
+            youtubUrl
           }
         }
         demoUrl
-        description
+        description{
+         text
+      html
+      raw
+      markdown
+        }
         free
         id
         name
@@ -202,7 +218,12 @@ const getUserAllEnrolledCourseList = async (email)=> {
         slug
         sourceCode
         free
-        description
+        description{
+         text
+      html
+      raw
+      markdown
+        }
         demoUrl
         tag
         chapter(first:50) {
@@ -223,6 +244,20 @@ const getUserAllEnrolledCourseList = async (email)=> {
   return result;
 }
 
+const addNewMember =async (email, paymentId)=>{
+  const query = gql`
+    mutation MyMutation {
+  createMembership(data: {active: true,
+       email: "`+email+`", 
+       paymentId: "`+paymentId+`",}) {  
+      id
+  }
+}
+  `
+  const result = await request(Master_URL, query);
+  return result;
+}
+
 const GlobalApi = {
   getAllCourseList,
   getSideBanner,
@@ -231,7 +266,8 @@ const GlobalApi = {
   checkUserEnrolledToCourse,
   getUserEnrolledCourseDetails,
   markChapterCompleted,
-  getUserAllEnrolledCourseList
+  getUserAllEnrolledCourseList,
+  addNewMember
 };
 
 export default GlobalApi;

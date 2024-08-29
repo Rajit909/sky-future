@@ -25,14 +25,14 @@ const CourseList = () => {
   };
 
   return (
-    <div className="p-5 bg-transparent border shadow-xl  rounded-xl m-5">
+    <div className="p-5 border shadow-xl  rounded-xl m-5">
       {/* title and filter */}
       <div className="flex items-center justify-between">
         <h2 className="text-[20px] font-bold text-blue-700">All courses</h2>
  
 
-        <div>
-          {/* <Select>
+        {/* <div>
+          <Select>
             <SelectTrigger className="w-[100px]">
               <SelectValue placeholder="Filter" />
             </SelectTrigger>
@@ -41,11 +41,11 @@ const CourseList = () => {
               <SelectItem value="dark">paid</SelectItem>
               <SelectItem value="system">free</SelectItem>
             </SelectContent>
-          </Select> */}
-        </div>
+          </Select>
+        </div> */}
       </div>
       {/* display courses */}
-      <div className="grid col-span-2 lg:grid-cols-3 gap-5 mt-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-5">
         {courseList?.length > 0
           ? courseList.map((item, index) => (
             <Link href={'/course_preview/'+item.slug} key={index}>

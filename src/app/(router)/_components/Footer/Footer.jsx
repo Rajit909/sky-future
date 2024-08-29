@@ -14,20 +14,12 @@ const Footer = () => {
             <div className="block p-10">
               <h4 className="text-xl text-white font-bold mb-7">Resources</h4>
               <ul className="text-lg  transition-all duration-500">
-                <li className="mb-6">
+                <li className="mb-6" style={{listStyleType:"none"}}>
                   <Link href={"/"} className="text-gray-400 hover:text-white">
                     Home
                   </Link>
                 </li>
-                <li className="mb-6">
-                  <Link
-                    href={"/services"}
-                    className="text-gray-400 hover:text-white"
-                  >
-                    Services
-                  </Link>
-                </li>
-                <li className="mb-6">
+                <li className="mb-6" style={{listStyleType:"none"}}>
                   <Link
                     href={"/register"}
                     className="text-gray-400 hover:text-white"
@@ -35,7 +27,7 @@ const Footer = () => {
                     Register
                   </Link>
                 </li>
-                <li className="mb-6">
+                <li className="mb-6" style={{listStyleType:"none"}}>
                   <Link
                     href={"/installments"}
                     className="text-gray-400 hover:text-white"
@@ -43,7 +35,7 @@ const Footer = () => {
                     Installments
                   </Link>
                 </li>
-                <li className="mb-6">
+                <li className="mb-6" style={{listStyleType:"none"}}>
                   <Link
                     href={"/contact"}
                     className="text-gray-400 hover:text-white"
@@ -51,7 +43,7 @@ const Footer = () => {
                     Contact Us
                   </Link>
                 </li>
-                <li className="mb-6">
+                <li className="mb-6" style={{listStyleType:"none"}}>
                   <Link
                     href={"/about-us"}
                     className="text-gray-400 hover:text-white"
@@ -65,23 +57,23 @@ const Footer = () => {
             <div className="block p-10">
               <h4 className="text-xl text-white font-bold mb-7">Support</h4>
               <ul className="text-lg  transition-all duration-500">
-                <li className="mb-6">
+                <li className="mb-6" style={{listStyleType:"none"}}>
                   <a href="#" className="text-gray-400 hover:text-white">
                     Customer Support
                   </a>
                 </li>
 
-                <li className="mb-6">
+                <li className="mb-6" style={{listStyleType:"none"}}>
                   <a href="#" className=" text-gray-400 hover:text-white">
                     FAQs
                   </a>
                 </li>
-                <li className="mb-6">
+                <li className="mb-6" style={{listStyleType:"none"}}>
                   <a href="#" className=" text-gray-400 hover:text-white">
                     Terms & Conditions
                   </a>
                 </li>
-                <li>
+                <li style={{listStyleType:"none"}}>
                   <a href="#" className=" text-gray-400 hover:text-white">
                     Privacy Policy
                   </a>
@@ -142,7 +134,8 @@ const Footer = () => {
 
                     <h2 className="text-white pl-4 font-semibold">Contact</h2>
                   </div>
-                  <p className=" text-gray-300 pl-16">+91 9718273445</p>
+                  <p className=" text-gray-300 pl-16">+91 9718273445 </p>
+                  <p className="text-gray-300 pl-16">+91 8979381700</p>
                 </div>
 
                 {/* <div className=" mt-3">

@@ -13,7 +13,7 @@ const Courses = () => {
     }
   }, []);
   return (
-    <section className="bg-gray-100 bg-gradient-to-r from-blue-300 to-purple-500 mt-16">
+    <section className="bg-white mt-16">
 
         <Welcomebanner />     
     <div className=" grid grid-cols-1 md:grid-cols-4 py-16">

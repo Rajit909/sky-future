@@ -26,6 +26,8 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import Newsletter from "../Newsletter";
 
 const NavBar = () => {
   const { user, isLoaded } = useUser();
@@ -53,25 +55,14 @@ const NavBar = () => {
                   <span className="hover:text-gray-500"> Dashboard</span>
                 </button>
               </Link>
-            ) : (
+            ) : (<>
               <Link href={"/"}>
                 <button className=" text-gray-600 font-medium text-sm px-5 py-2.5 text-center inline-flex gap-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 active:scale-95">
                   <Home />
                   <span className="hover:text-gray-500 mt-[2.5px]">Home</span>
                 </button>
               </Link>
-            )}
-
-            <Link href={"/course"}>
-              <button className=" text-gray-600 font-medium text-sm px-5 py-2.5 text-center inline-flex gap-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 active:scale-95">
-                <BookOpen />
-                <span className="hover:text-gray-500 mt-[2.5px]">
-                  {" "}
-                  All Courses
-                </span>
-              </button>
-            </Link>
-            <Link href={"/servises"}>
+              {/* <Link href={"/servises"}>
               <button className=" text-gray-600 font-medium text-sm px-5 py-2.5 text-center inline-flex gap-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 active:scale-95">
                 <Cog />
                 <span className="hover:text-gray-500 mt-[2.5px]">
@@ -79,7 +70,7 @@ const NavBar = () => {
                   Servises
                 </span>
               </button>
-            </Link>
+            </Link> */}
             <Link href={"/register"}>
               <button className=" text-gray-600 font-medium text-sm px-5 py-2.5 text-center inline-flex gap-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 active:scale-95">
                 <CircleUserRound />
@@ -108,14 +99,44 @@ const NavBar = () => {
                 </span>
               </button>
             </Link>
+            </>
+            )}
+
+            <Link href={"/courses"}>
+              <button className=" text-gray-600 font-medium text-sm px-5 py-2.5 text-center inline-flex gap-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 active:scale-95">
+                <BookOpen />
+                <span className="hover:text-gray-500 mt-[2.5px]">
+                  {" "}
+                  Live Courses
+                </span>
+              </button>
+            </Link>
+           
+            
           </div>
-          <Link href={"#"}>
-          <BellDot className="text-gray-500 mt-2 mr-3" />
-          </Link>
+          <div className="cursor-pointer">          
+          <Dialog className="cursor-pointer">
+                <DialogTrigger asChild>
+                   <BellDot className="text-gray-500 mt-2 mr-3" />
+                </DialogTrigger>
+                <DialogContent className="bg-white p-5">
+                <DialogHeader>
+                <DialogTitle>Subscribe Now</DialogTitle>
+                </DialogHeader>
+                <DialogDescription>
+                Subscribe now to get notified about exclusive offers from us.
+                </DialogDescription>
+                <div className="flex items-center justify-center max-w-md pl-4">
+                <Newsletter/>
+                </div>
+
+                </DialogContent>
+              </Dialog>
+              </div>
 
           {/* {isLoaded && user ? (
             <div className="mt-1 ">
-              <UserButton afterSignOutUrl="/" />
+              <UserButton afterSignOutUrl="/"  />
             </div>
           ) : (
             <Link href={"/sign-in"}>
@@ -127,7 +148,36 @@ const NavBar = () => {
         </div>
         {/* for mobile */}
         <div className="lg:hidden cursor-pointer flex">
-          <BellDot className="text-gray-500 mr-5 mt-1" size={30} />
+        <div className="cursor-pointer">          
+        <Dialog className="cursor-pointer">
+                <DialogTrigger asChild>
+                   <BellDot className="text-gray-500 mt-2 mr-3" />
+                </DialogTrigger>
+                <DialogContent className="bg-white p-5">
+                <DialogHeader>
+                <DialogTitle>Subscribe Now</DialogTitle>
+                </DialogHeader>
+                <DialogDescription className="ml-8">
+                    Subscribe now to get notified about exclusive offers from us.
+                </DialogDescription>
+                <div className="flex items-center justify-center max-w-md">
+                <Newsletter/>
+                </div>
+
+                </DialogContent>
+              </Dialog>
+              </div>
+          {/* {isLoaded && user ? (
+                  <div className="mt-1 mr-3 ">
+                    <UserButton afterSignOutUrl="/" />
+                  </div>
+                ) : (
+                  <Link href={"/sign-in"}>
+                    <Button className=" bg-white hover:bg-[blue] hover:text-white text-black border border-black font-medium rounded-[7px] text-sm px-3 py-1 text-center inline-flex items-center justify-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 active:scale-95">
+                      Get started
+                    </Button>
+                  </Link>
+                )} */}
           <DropdownMenu className="border-none">
             <DropdownMenuTrigger>
               <Menu className="mr-2" size={30} />
@@ -151,14 +201,14 @@ const NavBar = () => {
                 )}
               </DropdownMenuLabel>
               {/* <DropdownMenuSeparator /> */}
-              <DropdownMenuItem className="cursor-pointer px-5">
+              {/* <DropdownMenuItem className="cursor-pointer px-5">
                 <Link href={"/servises"}>
                   <button className=" text-gray-600 font-medium text-sm px-2 text-center inline-flex gap-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 active:scale-95">
                     <Cog />
                     <span className="hover:text-gray-500"> Servises</span>
                   </button>
                 </Link>
-              </DropdownMenuItem>
+              </DropdownMenuItem> */}
               {/* <DropdownMenuSeparator /> */}
               <DropdownMenuItem className="cursor-pointer">
                 <Link href={"/about-us"}>
@@ -170,10 +220,10 @@ const NavBar = () => {
               </DropdownMenuItem>
               {/* <DropdownMenuSeparator /> */}
               <DropdownMenuItem>
-                <Link href={"/course"}>
+                <Link href={"/courses"}>
                   <button className=" text-gray-600 font-medium text-sm px-5 text-center inline-flex gap-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 active:scale-95">
                     <BookOpen className="" />
-                    <span className="hover:text-gray-500"> All Courses</span>
+                    <span className="hover:text-gray-500"> Live Courses</span>
                   </button>
                 </Link>
               </DropdownMenuItem>

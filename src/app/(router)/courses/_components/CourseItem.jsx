@@ -1,39 +1,42 @@
+import { Clock10 } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
 const CourseItem = ({ course }) => {
   return (
-    <div className=" border rounded-xl hover:shadow-md cursor-pointer hover:shadow-purple-300">
-      <div>
+    <div className=" border-2 border-gray-200 rounded overflow-hidden shadow-xl" data-aos="fade-up" data-aos-ease="ease-in">
+    <a href="#"></a>
+    <div className="relative">
+      <a href="#" className="group relative flex items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg">
         <Image
+          className="h-full min-h-48 max-h-48 w-full object-cover object-center transition duration-200 group-hover:scale-110"
           src={course?.banner?.url}
-          width={500}
+          alt="Sunset in the mountains"
+          width={300}
           height={200}
-          alt="banner"
-          className="rounded-t-xl h-[120px] lg:h-[150px] object-cover]"
         />
-      </div>
-      <div className="flex flex-col gap-5 p-3">
-        <h2 className="font-medium">{course?.name}</h2>
-        <h2 className="text-[12px] text-gray-400">{course?.author}</h2>
-       {/* {
-        course?.chapter.length === 0 ? 
-        <div className="flex items-center gap-5">
-        <Image src="/images/youtub.jfif" width={50} height={50} alt="youtub" />
-        <h2>Watch on Youtub</h2>
-      </div> :
-        <div className="flex items-center gap-5">
-        <Image src="/images/chapter.jfif" width={50} height={50} alt="chapter"/>
-        <h2>Chapters</h2>
-      </div> 
-       } */}
-       <div className="flex items-center gap-5">
-        <Image src="/images/chapter.jfif" width={30} height={30} alt="chapter"/>
-        <h2 className="font-medium text-sm ">Total Chapters: {course?.totalChapters} </h2>
-      </div> 
-        <h2 className="text-[15px]">{course?.free ? "Free" : "Paid"}</h2>
-      </div>
+        {/* <div className="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25"></div> */}
+      </a>
     </div>
+    <div className="px-6 py-4">
+      <a
+        href="#"
+        className="font-semibold text-lg inline-block hover:text-indigo-600 transition duration-500 ease-in-out"
+      >
+        {course?.name}
+      </a>
+      {/* <p className="text-gray-500 text-sm"></p> */}
+    </div>
+    <div className="px-6 py-4 flex flex-row items-center">
+      <span
+        href="#"
+        className="py-1 text-sm font-regular text-gray-900 mr-1 flex flex-row items-center"
+      >
+        <Clock10 />
+        <span className="ml-1">(3, 6, 11) Months</span>
+      </span>
+    </div>
+  </div>
   );
 };
 

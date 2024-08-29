@@ -1,18 +1,24 @@
 import React from 'react'
+import { YouTubeEmbed } from '@next/third-parties/google'
+import ReactPlayer from 'react-player';
 
-const VideoPlayer = ({videoUrl, poster}) => {
+
+
+
+const VideoPlayer = ({ videoUrl, poster }) => {
+  console.log("video url in videoplayer:", videoUrl);
   return (
-    <div className='flex justify-center'>
-      <video
-      width={600}
-      height={250}
-      controls
-      key={videoUrl}
-      className='rounded-[7px] '
+    <div className='flex justify-center flex-col ml-2'>
+      <YouTubeEmbed 
+      videoid={videoUrl}
+      height={300} 
       poster={poster}
-      > 
-        <source src={videoUrl} type='video/mp4'/>
-      </video>
+       />
+       {/* <ReactPlayer 
+       url={`https://www.youtube.com/watch?v=${videoUrl}`} 
+       poster={poster}
+       width="100%" height="500px" controls /> */}
+        {/* </ReactPlayer> */}
     </div>
   )
 }

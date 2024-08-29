@@ -1,6 +1,5 @@
 "use client";
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
-import Image from "next/image";
 import React from "react";
 
 import "./_components/style.css";
@@ -27,7 +26,7 @@ const About = () => {
   return (
     <>
       {/* bg effect */}
-      <section className="bg-gray-100 bg-gradient-to-r from-blue-300 to-purple-500 ">
+      <section className="bg-gray-100 bg-gradient-to-r from-blue-200 to-purple-300 ">
       
 
           <div className="container mx-auto py-8 px-4 sm:px-6 lg:px-8 ">
@@ -52,7 +51,7 @@ const About = () => {
                 <div className="mt-8 cursor-pointer">
                   <a
                     href="#"
-                    className=" text-yellow-300 hover:text-blue-600 font-medium cursor-pointer"
+                    className=" text-blue-500 hover:text-blue-700 font-medium cursor-pointer"
                   >
                     Learn more about us
                     <span className="ml-2">&#8594;</span>
