@@ -115,18 +115,18 @@ const NavBar = () => {
             
           </div>
           <div className="cursor-pointer">          
-          <Dialog className="cursor-pointer">
+          <Dialog className="cursor-pointer" >
                 <DialogTrigger asChild>
                    <BellDot className="text-gray-500 mt-2 mr-3" />
                 </DialogTrigger>
-                <DialogContent className="bg-white p-5">
+                <DialogContent className="bg-white">
                 <DialogHeader>
                 <DialogTitle>Subscribe Now</DialogTitle>
                 </DialogHeader>
                 <DialogDescription>
                 Subscribe now to get notified about exclusive offers from us.
                 </DialogDescription>
-                <div className="flex items-center justify-center max-w-md pl-4">
+                <div className="flex items-center justify-center max-w-md pl-4 " style={{maxHeight:"380px"}}>
                 <Newsletter/>
                 </div>
 
@@ -160,7 +160,7 @@ const NavBar = () => {
                 <DialogDescription className="ml-8">
                     Subscribe now to get notified about exclusive offers from us.
                 </DialogDescription>
-                <div className="flex items-center justify-center max-w-md">
+                <div className="flex items-center justify-center max-w-md pl-4" style={{maxHeight:"380px"}}>
                 <Newsletter/>
                 </div>
 

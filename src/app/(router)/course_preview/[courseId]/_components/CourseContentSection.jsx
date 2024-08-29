@@ -29,7 +29,7 @@ const CourseContentSection = ({ courseInfo, isUserAlreadyEnrolled, watchMode=fal
       <div className={` ${watchMode&&'max-h-[510px]'} overflow-y-auto`} >
       {courseInfo.chapter.map((item, index) => (
         
-        <div >
+        <div  key={index}>
           <h2 className={`border rounded-[8px] px-4 m-2 flex justify-between p-2 cursor-pointer 
     ${activeIndex === index ? 'bg-[blue] text-white' : ''}
     ${isUserAlreadyEnrolled ? 'hover:bg-[#0000FF] hover:text-white' : ''}
