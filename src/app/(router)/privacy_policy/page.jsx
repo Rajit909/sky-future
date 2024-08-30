@@ -7,7 +7,7 @@ const PrivacyPolicy = () => {
         className="bg-gray-100 bg-gradient-to-r from-blue-50 to-purple-100 py-10"
         style={{ margin: "70px 0 0 0" }}
       >
-        <h1 className="text-center underline font-bold">Privacy Policy</h1>
+        <h1 className="text-center underline font-bold text-3xl">Privacy Policy</h1>
         <div className="container mx-auto px-4">
           <p className="text-justify mt-4">
             At <strong>Sky Future Academy</strong>, accessible from{" "}
