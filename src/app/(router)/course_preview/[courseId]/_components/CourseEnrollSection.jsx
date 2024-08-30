@@ -17,12 +17,12 @@ const CourseEnrollSection = ({ courseInfo, isUserAlreadyEnrolled }) => {
 
   // enroll to the course
   const onEnrollCourse = () => {
-    // toast("Please Contact to your Admin or Institute", {
-    //         description: "To get Access to this course",
-    //       });
+    toast("Please Contact to your Admin or Institute", {
+            description: "To get Access to this course",
+          });
     GlobalApi.enrollToCourse(
-      courseInfo?.slug,
-      user?.primaryEmailAddress?.emailAddress
+      // courseInfo?.slug,
+      // user?.primaryEmailAddress?.emailAddress
     ).then((res) => {
       console.log("enrolltocourse response", res);
 
