@@ -16,7 +16,7 @@ const Register = () => {
     gender: "",
     email: "",
     phone: "",
-    aadhar:"",
+    aadhar: "",
     qfn: "",
     address: "",
     state: "",
@@ -26,22 +26,26 @@ const Register = () => {
 
   console.log(userData);
 
-  const handleFileChange = (e, setFile, maxSize)=>{
+  const handleFileChange = (e, setFile, maxSize) => {
     const file = e.target.files[0];
-    if(file.size > maxSize){
-      alert(`फ़ाइल का Size ${maxSize / 1024}KB से अधिक है. कृपया 400kb से कम की फ़ाइल अपलोड करें।.`);
+    if (file.size > maxSize) {
+      alert(
+        `फ़ाइल का Size ${
+          maxSize / 1024
+        }KB से अधिक है. कृपया 400kb से कम की फ़ाइल अपलोड करें।.`
+      );
       e.target.value = null;
-    }else{
+    } else {
       setFile(file);
     }
-  }
+  };
 
+  const handleHighmarkfileChange = (e) =>
+    handleFileChange(e, setHighmarkFile, 400 * 1024);
 
+  const handleIntermarkfileChange = (e) =>
+    handleFileChange(e, setIntermarkFile, 400 * 1024);
 
-  const handleHighmarkfileChange = (e) => handleFileChange(e, setHighmarkFile, 400 * 1024);
-
-  const handleIntermarkfileChange = (e) => handleFileChange(e, setIntermarkFile, 400 * 1024);
-  
   const handleChange = (e) => {
     const { id, value } = e.target;
     setUserData((prevData) => ({ ...prevData, [id]: value }));
@@ -52,10 +56,10 @@ const Register = () => {
     setIsLoading(true);
     try {
       const formData = new FormData();
-      if(highmarkFile) formData.append("highmark", highmarkFile);
-      if(intermarkFile) formData.append("intermark", intermarkFile);
+      if (highmarkFile) formData.append("highmark", highmarkFile);
+      if (intermarkFile) formData.append("intermark", intermarkFile);
       Object.keys(userData).forEach((key) => {
-        if(userData[key]) formData.append(key, userData[key]);
+        if (userData[key]) formData.append(key, userData[key]);
       });
 
       const response = await fetch("/api/upload", {
@@ -79,7 +83,7 @@ const Register = () => {
         // Redirect to payment page
         router.push("/payment");
       } else {
-        alert(result.error ||"Failed to submit Application.");
+        alert(result.error || "Failed to submit Application.");
       }
     } catch (error) {
       console.error("Error Submitting form", error);
@@ -91,7 +95,7 @@ const Register = () => {
   return (
     <>
       <div
-        className="bg-gray-100 bg-gradient-to-r from-blue-400 to-purple-500 py-10"
+        className="bg-gray-100 bg-gradient-to-r from-blue-200 to-purple-300 py-10"
         style={{ margin: "70px 0 0 0" }}
       >
         <div className="container mx-auto py-5" data-aos="fade-left">
@@ -103,9 +107,7 @@ const Register = () => {
               Need Any Courses
             </h5>
             <h1 className="text-white">Afordable Price For New Students</h1>
-            <p className="text-white mt-3">
-              
-            </p>
+            <p className="text-white mt-3"></p>
             {/* <ul className="list-inline text-white m-0">
               <li className="py-2">
                 <i className="fa fa-check text-primary mr-3"></i>Labore eos amet
@@ -125,7 +127,7 @@ const Register = () => {
             <div className="bg-gray-100 text-center p-4">
               <h1 className="text-2xl font-bold">Register Now</h1>
             </div>
-            <div className="bg-gray-100 bg-gradient-to-r from-blue-300 to-purple-500 shadow-lg p-6">
+            <div className="bg-gray-100 bg-gradient-to-r from-blue-200 to-purple-400 shadow-lg p-6">
               <form onSubmit={handleSubmit} encType="multipart/form-data">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <input
@@ -192,7 +194,7 @@ const Register = () => {
                     placeholder="Phone"
                     required
                   />
-                  
+
                   <input
                     type="text"
                     className="form-control border-0 p-4 rounded"
@@ -219,7 +221,7 @@ const Register = () => {
                     <option value="Graduation">Graduation</option>
                     <option value="Post-Graduation">Post-Graduation</option>
                   </select>
-                  
+
                   <div className="p-4 bg-gray-200 rounded">
                     <h6 className="mb-2">
                       10<sup>th</sup> MarkSheet
@@ -244,7 +246,7 @@ const Register = () => {
                       required
                     />
                   </div>
-                    <textarea
+                  <textarea
                     className="form-control border-0 p-4 rounded md:col-span-2"
                     id="address"
                     name="address"
@@ -309,9 +311,9 @@ const Register = () => {
                     className="form-control border-0 p-3 rounded"
                     id="country"
                     name="country"
-                    pattern="[A-Za-z\s\-]{2,}" 
+                    pattern="[A-Za-z\s\-]{2,}"
                     value={userData.country}
-                    title="Country names should only contain letters, spaces, and hyphens." 
+                    title="Country names should only contain letters, spaces, and hyphens."
                     onChange={handleChange}
                     placeholder="Country"
                     required
@@ -325,34 +327,64 @@ const Register = () => {
                     required
                   >
                     <option hidden>Select course</option>
-                          <option value="Diploma in Hotel Management">
-                            Diploma in Hotel Management
-                          </option>
-                          <option value="Diploma in Air hostess">
-                            Diploma in Air hostess
-                          </option>
-                          <option value="Diploma in Cabin crew">
-                            Diploma in Cabin crew
-                          </option>
-                          <option value="Diploma in Airport Management">
-                            Diploma in Airport Management
-                          </option>
-                          <option value="Diploma in Travel & Tourism Management">
-                            Diploma in Travel & Tourism Management
-                          </option>
-                          <option value="Diploma in Human Resources Management">
-                            Diploma in Human Resources Management
-                          </option>
-                          <option value="Diploma in Marketing Management">
-                            Diploma in Marketing Management
-                          </option>
-                          <option value="Diploma in Metro Management">
-                            Diploma in Metro Management
-                          </option>
-                          <option value="Diploma in Web Designing">
-                            Diploma in Web Designing
-                          </option>
+                    <option value="Diploma in Hotel Management">
+                      Diploma in Hotel Management
+                    </option>
+                    <option value="Diploma in Air hostess">
+                      Diploma in Air hostess
+                    </option>
+                    <option value="Diploma in Cabin crew">
+                      Diploma in Cabin crew
+                    </option>
+                    <option value="Diploma in Airport Management">
+                      Diploma in Airport Management
+                    </option>
+                    <option value="Diploma in Travel & Tourism Management">
+                      Diploma in Travel & Tourism Management
+                    </option>
+                    <option value="Diploma in Human Resources Management">
+                      Diploma in Human Resources Management
+                    </option>
+                    <option value="Diploma in Marketing Management">
+                      Diploma in Marketing Management
+                    </option>
+                    <option value="Diploma in Metro Management">
+                      Diploma in Metro Management
+                    </option>
+                    <option value="Diploma in Web Designing">
+                      Diploma in Web Designing
+                    </option>
                   </select>
+                </div>
+                <div className="flex flex-col space-y-2 pt-2">
+                  <label className=" text-gray-600 font-normal flex items-start space-x-2">
+                    <div>
+                      <input
+                        type="checkbox"
+                        className="h-4 w-4 rounded border-gray-300 focus:ring-indigo-500 text-indigo-600"
+                        required
+                      />
+                    </div>
+                    <div>
+                      I have read and agree to the{" "}
+                      <a
+                        href="/legal/privacy"
+                        target="_blank"
+                        className="text-blue-700 hover:text-primary-700"
+                      >
+                        Privacy Policy
+                      </a>{" "}
+                      and{" "}
+                      <a
+                        href="/legal/terms"
+                        target="_blank"
+                        className="text-blue-700 hover:text-primary-700"
+                      >
+                        Terms and Conditions
+                      </a>
+                      .
+                    </div>
+                  </label>
                 </div>
                 <div className="text-center mt-6">
                   <button

@@ -130,6 +130,7 @@ const NavBar = () => {
                 <Newsletter/>
                 </div>
 
+
                 </DialogContent>
               </Dialog>
               </div>
