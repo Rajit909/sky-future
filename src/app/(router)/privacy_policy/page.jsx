@@ -12,7 +12,7 @@ const PrivacyPolicy = () => {
           <p className="text-justify mt-4">
             At <strong>Sky Future Academy</strong>, accessible from{" "}
             <a href="https://www.skyfutureacademy.com/">
-              https://www.skyfutureacademy.com/home
+              https://www.skyfutureacademy.com/
             </a>
             , one of our main priorities is the privacy of our visitors. This
             Privacy Policy document contains types of information that is
