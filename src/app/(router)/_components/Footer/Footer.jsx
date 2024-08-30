@@ -15,14 +15,14 @@ const Footer = () => {
               <h4 className="text-xl text-white font-bold mb-7">Resources</h4>
               <ul className="text-lg  transition-all duration-500">
                 <li className="mb-6" style={{listStyleType:"none"}}>
-                  <Link href={"/"} className="text-gray-400 hover:text-white">
+                  <Link href={"/"} className="text-gray-300 hover:text-white">
                     Home
                   </Link>
                 </li>
                 <li className="mb-6" style={{listStyleType:"none"}}>
                   <Link
                     href={"/register"}
-                    className="text-gray-400 hover:text-white"
+                    className="text-gray-300 hover:text-white"
                   >
                     Register
                   </Link>
@@ -30,7 +30,7 @@ const Footer = () => {
                 <li className="mb-6" style={{listStyleType:"none"}}>
                   <Link
                     href={"/installments"}
-                    className="text-gray-400 hover:text-white"
+                    className="text-gray-300 hover:text-white"
                   >
                     Installments
                   </Link>
@@ -38,7 +38,7 @@ const Footer = () => {
                 <li className="mb-6" style={{listStyleType:"none"}}>
                   <Link
                     href={"/contact"}
-                    className="text-gray-400 hover:text-white"
+                    className="text-gray-300 hover:text-white"
                   >
                     Contact Us
                   </Link>
@@ -46,7 +46,7 @@ const Footer = () => {
                 <li className="mb-6" style={{listStyleType:"none"}}>
                   <Link
                     href={"/about-us"}
-                    className="text-gray-400 hover:text-white"
+                    className="text-gray-300 hover:text-white"
                   >
                     About Us
                   </Link>
@@ -58,25 +58,25 @@ const Footer = () => {
               <h4 className="text-xl text-white font-bold mb-7">Support</h4>
               <ul className="text-lg  transition-all duration-500">
                 <li className="mb-6" style={{listStyleType:"none"}}>
-                  <a href="#" className="text-gray-400 hover:text-white">
+                  <Link href="/contact" className="text-gray-300 hover:text-white">
                     Customer Support
-                  </a>
+                  </Link>
                 </li>
 
                 <li className="mb-6" style={{listStyleType:"none"}}>
-                  <a href="#" className=" text-gray-400 hover:text-white">
+                  <Link href="/faqs" className=" text-gray-300 hover:text-white">
                     FAQs
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-6" style={{listStyleType:"none"}}>
-                  <a href="#" className=" text-gray-400 hover:text-white">
+                  <Link href="/terms_conditions" className=" text-gray-300 hover:text-white">
                     Terms & Conditions
-                  </a>
+                  </Link>
                 </li>
                 <li style={{listStyleType:"none"}}>
-                  <a href="#" className=" text-gray-400 hover:text-white">
+                  <Link href="/privacy_policy" className=" text-gray-300 hover:text-white">
                     Privacy Policy
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -87,7 +87,7 @@ const Footer = () => {
                 <h1 className="text-white text-4xl font-bold p-2">
                   Get in Touch
                 </h1>
-                <p className="text-gray-400 font-semibold p-2">
+                <p className="text-gray-300 font-semibold p-2">
                   Don’t hesitate to contact and feel free to reach us !
                 </p>
               </div>
@@ -189,7 +189,7 @@ const Footer = () => {
                   style={{width: "auto", height: "auto"}}
                 />
               </a>
-              <span className="text-gray-400  block">
+              <span className="text-gray-300  block">
                 ©<a href="/">Sky Future Academy</a> 2024, All rights reserved.
               </span>
               <div className="flex mt-4 space-x-4 sm:justify-center sm:mt-0 ">

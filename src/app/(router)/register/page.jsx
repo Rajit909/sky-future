@@ -368,7 +368,7 @@ const Register = () => {
                     <div>
                       I have read and agree to the{" "}
                       <a
-                        href="/legal/privacy"
+                        href="/privacy_policy"
                         target="_blank"
                         className="text-blue-700 hover:text-primary-700"
                       >
@@ -376,7 +376,7 @@ const Register = () => {
                       </a>{" "}
                       and{" "}
                       <a
-                        href="/legal/terms"
+                        href="/terms_conditions"
                         target="_blank"
                         className="text-blue-700 hover:text-primary-700"
                       >
