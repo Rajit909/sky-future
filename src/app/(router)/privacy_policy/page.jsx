@@ -75,13 +75,13 @@ const PrivacyPolicy = () => {
           <p className="text-justify mt-4">
             <strong>Sky Future Academy</strong> follows a standard procedure of
             using log files. These files log visitors when they visit websites.
-            All hosting companies do this and a part of hosting services'
+            All hosting companies do this and a part of hosting services `&apos;`
             analytics. The information collected by log files include internet
             protocol (IP) addresses, browser type, Internet Service Provider
             (ISP), date and time stamp, referring/exit pages, and possibly the
             number of clicks. These are not linked to any information that is
             personally identifiable. The purpose of the information is for
-            analyzing trends, administering the site, tracking users' movement
+            analyzing trends, administering the site, tracking users `&apos;` movement
             on the website, and gathering demographic information.
           </p>
           <h2 className="text-justify mt-4">Refund Policies</h2>
@@ -150,10 +150,10 @@ const PrivacyPolicy = () => {
           <h2 className="text-justify mt-4">Cookies and Web Beacons</h2>
           <p className="text-justify mt-4">
             Like any other website, <strong>Sky Future Academy</strong> uses
-            'cookies'. These cookies are used to store information including
-            visitors' preferences, and the pages on the website that the visitor
-            accessed or visited. The information is used to optimize the users'
-            experience by customizing our web page content based on visitors'
+            `&apos;`cookies`&apos;`. These cookies are used to store information including
+            visitors`&apos;` preferences, and the pages on the website that the visitor
+            accessed or visited. The information is used to optimize the users`&apos;`
+            experience by customizing our web page content based on visitors`&apos;`
             browser type and/or other information.
           </p>
           <h2 className="text-justify mt-4">
@@ -168,7 +168,7 @@ const PrivacyPolicy = () => {
             cookies, JavaScript, or Web Beacons that are used in their
             respective advertisements and links that appear on{" "}
             <strong>Sky Future Academy</strong>, which are sent directly to
-            users' browser. They automatically receive your IP address when this
+            users`&apos;` browser. They automatically receive your IP address when this
             occurs. These technologies are used to measure the effectiveness of
             their advertising campaigns and/or to personalize the advertising
             content that you see on websites that you visit.
@@ -179,7 +179,7 @@ const PrivacyPolicy = () => {
           </p>
           <h2 className="text-justify mt-4">Third Party Privacy Policies</h2>
           <p className="text-justify mt-4">
-            <strong>Sky Future Academy</strong>'s Privacy Policy does not apply
+            <strong>Sky Future Academy</strong>`&apos;`s Privacy Policy does not apply
             to other advertisers or websites. Thus, we are advising you to
             consult the respective Privacy Policies of these third-party ad
             servers for more detailed information. It may include their
@@ -188,7 +188,7 @@ const PrivacyPolicy = () => {
           <p className="text-justify mt-4">
             You can choose to disable cookies through your individual browser
             options. To know more detailed information about cookie management
-            with specific web browsers, it can be found at the browsers'
+            with specific web browsers, it can be found at the browsers`&apos;`
             respective websites.
           </p>
           <h2 className="text-justify mt-4">
@@ -201,7 +201,7 @@ const PrivacyPolicy = () => {
           </p>
           <ul className="list-disc mt-4">
             <li>
-              Request that a business that collects a consumer's personal data
+              Request that a business that collects a consumer`&apos;`s personal data
               disclose the categories and specific pieces of personal data that
               a business has collected about consumers.
             </li>
@@ -210,8 +210,8 @@ const PrivacyPolicy = () => {
               consumer that a business has collected.
             </li>
             <li>
-              Request that a business that sells a consumer's personal data, not
-              sell the consumer's personal data.
+              Request that a business that sells a consumer`&apos;`s personal data, not
+              sell the consumer`&apos;`s personal data.
             </li>
           </ul>
           <h2 className="text-justify mt-4">GDPR Data Protection Rights</h2>
@@ -249,7 +249,7 @@ const PrivacyPolicy = () => {
               organization, or directly to you, under certain conditions.
             </li>
           </ul>
-          <h2 className="text-justify mt-4">Children's Information</h2>
+          <h2 className="text-justify mt-4">Children`&apos;`s Information</h2>
           <p className="text-justify mt-4">
             Another part of our priority is adding protection for children while
             using the internet. We encourage parents and guardians to observe,
