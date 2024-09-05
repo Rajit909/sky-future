@@ -136,6 +136,9 @@ const Footer = () => {
                   </div>
                   <p className=" text-gray-300 pl-16">+91 9718273445 </p>
                   <p className=" text-gray-300 pl-16">+91 8979381700</p>
+                  <p className="text-gray-300 pl-16">
+                  Toll-free : 0120-4485872
+                  </p>
                 </div>
 
                 {/* <div className=" mt-3">
