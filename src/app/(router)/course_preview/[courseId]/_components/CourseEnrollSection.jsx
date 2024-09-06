@@ -17,14 +17,11 @@ const CourseEnrollSection = ({ courseInfo, isUserAlreadyEnrolled }) => {
 
   // enroll to the course
   const onEnrollCourse = () => {
-    // toast("Please Contact to your Admin or Institute", {
-    //         description: "To get Access to this course",
-    //       });
     GlobalApi.enrollToCourse(
       courseInfo?.slug,
       user?.primaryEmailAddress?.emailAddress
     ).then((res) => {
-      console.log("enrolltocourse response", res);
+      console.log(res);
 
       if (res) {
         // message
@@ -38,8 +35,6 @@ const CourseEnrollSection = ({ courseInfo, isUserAlreadyEnrolled }) => {
 
         // redirect to watch course
         router.push("/watch-course/" + res.createUserEnrollCourse.id);
-      }else{
-        alert("Errors in enroll to course")
       }
     });
   };
@@ -47,12 +42,11 @@ const CourseEnrollSection = ({ courseInfo, isUserAlreadyEnrolled }) => {
     <div className=" p-3 text-center rounded-[10px] bg-[blue] px-5 flex flex-col gap-3">
       {/* user has membership and already login  */}
 
-     
-      {user && (membership || courseInfo.free)&&!isUserAlreadyEnrolled ? 
-        <div className="px-5 flex flex-col gap-3">
-           <h2 className="text-white text-[22px] font-bold  ">
+      <h2 className="text-white text-[22px] font-bold  ">
         Enroll to the course
       </h2>
+      {user && (membership || courseInfo.free)&&!isUserAlreadyEnrolled ? 
+        <div className="px-5 flex flex-col gap-3">
           <h2 className="text-white font-light">
             Enroll now to Start Learn to build
           </h2>
@@ -65,9 +59,6 @@ const CourseEnrollSection = ({ courseInfo, isUserAlreadyEnrolled }) => {
         </div>
        : !user ? 
         <div className="px-5 flex flex-col gap-3">
-           <h2 className="text-white text-[22px] font-bold  ">
-        Enroll to the course
-      </h2>
           <h2 className="text-white font-light">
             Enroll now to Start Learn to build
           </h2>
@@ -82,19 +73,14 @@ const CourseEnrollSection = ({ courseInfo, isUserAlreadyEnrolled }) => {
           <h2 className="text-white font-light">
             Buy Monthly Membership and get access to All courses
           </h2>
-          <Link href={"/membership"}>
           <Button className="bg-white hover:bg-white hover:text-primary text-[blue] rounded-[7px]">
             Buy Membership
           </Button>
-        </Link>
         </div>
       }
         {
           isUserAlreadyEnrolled&& 
           <div className="px-5 flex flex-col gap-3">
-             <h2 className="text-white text-[22px] font-bold  ">
-        Resume you Journey
-      </h2>
           <h2 className="text-white font-light">
             Continue to Learn this course
           </h2>
