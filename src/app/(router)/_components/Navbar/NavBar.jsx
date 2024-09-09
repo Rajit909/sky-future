@@ -145,8 +145,8 @@ const NavBar = () => {
                 Get started
               </Button>
             </Link>
-          )} 
-        </div>*/}
+          )} */}
+        </div>
         {/* for mobile */}
         <div className="lg:hidden cursor-pointer flex">
       
