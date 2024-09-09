@@ -19,9 +19,9 @@ const InProgressCourseList = ({userEnrolledCourses}) => {
             // first five seconds show loading and then show no course
             <div className='text-center mx-5 mt-10 m-5 px-8'>
               <h2 className='text-[18px] font-semibold text-[#333]'>You have `&apos;`t Enrolled any Course! Please  
-                <Link href='/course'>
+                <Link href='/contact'>
                 <Button variant="link" className=" text-blue-600 font-bold">
-                Enroll Now
+              Contact us.
               </Button>
               </Link>
                </h2>
