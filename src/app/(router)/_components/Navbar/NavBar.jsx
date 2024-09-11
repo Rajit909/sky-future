@@ -135,7 +135,7 @@ const NavBar = () => {
               </Dialog>
               </div>
 
-         {/*  {isLoaded && user ? (
+         {isLoaded && user ? (
             <div className="mt-1 ">
               <UserButton afterSignOutUrl="/"  />
             </div>
@@ -145,7 +145,7 @@ const NavBar = () => {
                 Get started
               </Button>
             </Link>
-          )} */}
+          )} 
         </div>
         {/* for mobile */}
         <div className="lg:hidden cursor-pointer flex">
