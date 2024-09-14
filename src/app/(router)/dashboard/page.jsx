@@ -17,9 +17,9 @@ const Dashboard = () => {
   // get all user enrolled course list
   const getAllUserEnrolledCourses = useCallback(() => {
     GlobalApi.getUserAllEnrolledCourseList(user.primaryEmailAddress.emailAddress).then(res=> {
-      console.log("courselist for dashboard");
-      console.log(res)
+      console.log("courselist in dashbord",res)
       setUserEnrolledCourses(res.userEnrollCourses)
+      console.log("userenrolled courses",res.userEnrollCourses)
     })
   }, [user])
 

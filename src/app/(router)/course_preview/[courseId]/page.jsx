@@ -23,9 +23,8 @@ const CoursePreview = ({ params }) => {
   // used to get course info by slug name
   const getCourseInfoById = useCallback(() => {
   GlobalApi.getCourseById(params?.courseId).then((res) => {
-    console.log(res);
     setCourseInfo(res?.courseList);
-    console.log("course_previw",res?.courseList);
+    console.log("course_previw",res);
   });
 }, [params]);
 

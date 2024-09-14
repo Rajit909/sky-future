@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 
 const InProgressCourseList = ({userEnrolledCourses}) => {
+  console.log("inprogress courselist",userEnrolledCourses)
   return (
     <div >
       <h2 className=' text-[blue] font-semibold m-3 bg-white p-3 text-[18px] rounded-[5px] '>Recently Enrolled Course</h2>

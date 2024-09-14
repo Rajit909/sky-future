@@ -11,6 +11,7 @@ const WatchCourse = ({ params }) => {
   const [courseInfo, setCourseInfo] = useState([]);
   const [completedChapter, setCompletedChapter] = useState([]);
   // console.log("completedChapter", completedChapter)
+  console.log("courseInfo in watch course name", courseInfo);
 
   const [activeChapterIndex, setActiveChapterIndex] = useState([]);
 
@@ -32,10 +33,10 @@ const WatchCourse = ({ params }) => {
         )
       );
 
-      setCourseInfo(res.userEnrollCourses[0].courseList);
+      setCourseInfo(res.userEnrollCourses[0].courseList[0]);
       console.log(
         "Cousreinfo in watch course",
-        res.userEnrollCourses[0].courseList
+        res.userEnrollCourses[0].courseList[0]
       );
     });
   }, [params, user]);
