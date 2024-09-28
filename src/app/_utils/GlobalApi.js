@@ -91,6 +91,7 @@ const getCourseById = async (courseId) => {
       tag
       totalChapters
     }
+    installments
   }
   
   `;
@@ -216,6 +217,7 @@ const getUserAllEnrolledCourseList = async (email)=> {
         id
         name
         totalChapters
+        installments
         slug
         sourceCode
         free
