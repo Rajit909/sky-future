@@ -151,7 +151,7 @@ const getUserEnrolledCourseDetails = async (id, email) => {
         banner {
           url
         }
-        chapter (first:20){
+        chapter (first:40){
           ... on Chapter {
             id
             name
