@@ -174,6 +174,7 @@ const getUserEnrolledCourseDetails = async (id, email) => {
         sourceCode
         totalChapters
       }
+       installments
     }
   }  
   `
