@@ -150,7 +150,7 @@ const NavBar = () => {
         {/* for mobile */}
         <div className="lg:hidden cursor-pointer flex">
       
-          {/* {isLoaded && user ? (
+           {isLoaded && user ? (
                   <div className="mt-1 mr-3 ">
                     <UserButton afterSignOutUrl="/" />
                   </div>
@@ -160,7 +160,7 @@ const NavBar = () => {
                       Get started
                     </Button>
                   </Link>
-                )} */}
+                )} 
           <DropdownMenu className="border-none">
             <DropdownMenuTrigger>
               <Menu className="mr-2" size={30} />
@@ -237,7 +237,7 @@ const NavBar = () => {
 
               <DropdownMenuSeparator />
                <DropdownMenuItem>
-                {isLoaded && user ? (
+               {/* {isLoaded && user ? (
                   <div className="mt-1 ">
                     <UserButton afterSignOutUrl="/" />
                   </div>
@@ -247,7 +247,7 @@ const NavBar = () => {
                       Get started
                     </Button>
                   </Link>
-                )}
+                )}*/}
               </DropdownMenuItem> 
             </DropdownMenuContent> 
           </DropdownMenu>
