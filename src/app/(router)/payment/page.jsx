@@ -31,7 +31,7 @@ const Payment = () => {
               
                   </div>
                   <h2 className="mt-6 text-2xl underline font-bold leading-5 text-gray-800 ">
-                   Pay your fee
+                   Scan QR
                   </h2>
                 </div>
               </div>
