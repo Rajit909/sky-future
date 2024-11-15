@@ -29,59 +29,59 @@ const Course = () => {
             url={images[0]}
             name={"Diploma in Air Hostaess"}
             desc={"description"}
-            time={"(3, 6, 11)"}
+            time={"(3, 6, 12)"}
           />
           <CourseItem
             url={images[1]}
             name={"Diploma in Airport management"}
             desc={"description"}
-            time={"(3, 6, 11)"}
+            time={"(3, 6, 12)"}
           />
           <CourseItem
             url={images[2]}
             name={"Diploma in Cabin crew"}
             desc={"description"}
-            time={"(3, 6, 11)"}
+            time={"(3, 6, 12)"}
           />
           <CourseItem
             url={images[3]}
             name={"Diploma in Hotel management"}
             desc={"description"}
-            time={"(3, 6, 11)"}
+            time={"(3, 6, 12)"}
           />
           <CourseItem
             url={images[4]}
             name={"Diploma in Human Resources management"}
             desc={"description"}
-            time={"(3, 6, 11)"}
+            time={"(3, 6, 12)"}
 
           />
           <CourseItem
             url={images[5]}
             name={"Diploma in Marketing management"}
             desc={"description"}
-            time={"(3, 6, 11)"}
+            time={"(3, 6, 12)"}
 
           />
           <CourseItem
             url={images[6]}
             name={"Diploma in Metro management"}
             desc={"description"}
-            time={"(3, 6, 11)"}
+            time={"(3, 6, 12)"}
 
           />
           <CourseItem
             url={images[7]}
             name={"Diploma in Travel & Tourism management"}
             desc={"description"}
-            time={"(3, 6, 11)"}
+            time={"(3, 6, 12)"}
 
           />
           <CourseItem
             url={images[8]}
             name={"Diploma in Web Designing"}
             desc={"description"}
-            time={"(3, 6, 11)"}
+            time={"(3, 6, 12)"}
 
           />
         </div>
