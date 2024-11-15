@@ -1,12 +1,13 @@
 import { React, useState } from "react";
 import { Lock, Play } from "lucide-react";
 
-const CourseContentSection = ({ courseInfo, isUserAlreadyEnrolled, watchMode=false, setActiveChapterIndex, completedChapter}) => {
+const CourseContentSection = ({ courseInfo, resp, isUserAlreadyEnrolled, watchMode=false, setActiveChapterIndex, completedChapter}) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   // const totalChapters = courseInfo?.chapter?.length || 0;
   // const chaptersPerInstallment = Math.ceil(totalChapters / 3);// 3 is the number of installments
 
+  console.log(resp, "info of resp")
   
   // use to check the chapter completed or not
   const checkIsChapterCompleted = (chapterId)=>{

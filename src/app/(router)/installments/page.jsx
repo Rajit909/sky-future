@@ -1,10 +1,16 @@
 
 "use client";
 
+import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { toast } from "sonner";
+import { useRouter } from "next/navigation";
+
 
 const CourseFeeCalculator = () => {
+
+  const router = useRouter();
+  
   const [selectedCourse, setSelectedCourse] = useState("");
   const [selectedPlan, setSelectedPlan] = useState("");
   const [fee, setFee] = useState(0);
@@ -267,7 +273,7 @@ const CourseFeeCalculator = () => {
             </div>
           </div>
           
-          <div className="border border-gray-300 rounded p-3 mb-4">
+          {/* <div className="border border-gray-300 rounded p-3 mb-4">
             <small id="passwordHelpBlock" className="form-text text-yellow-600">
               Enter name and Email to receive a receipt on your mail.
             </small>
@@ -301,14 +307,16 @@ const CourseFeeCalculator = () => {
                 />
               </div>
             </div>
-          </div>
+          </div> */}
+        
           <button
             type="button"
             className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
-            onClick={handlePayment}
-          >
+            onClick={()=> router.push("/payment")}
+            >
             Pay Now
           </button>
+          
         </form>
       </div>
     </section>

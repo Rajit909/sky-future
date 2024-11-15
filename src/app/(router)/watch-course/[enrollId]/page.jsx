@@ -9,9 +9,10 @@ import { toast } from "sonner";
 const WatchCourse = ({ params }) => {
   const { user } = useUser();
   const [courseInfo, setCourseInfo] = useState([]);
+  const [resp, setResp] = useState([]);
   const [completedChapter, setCompletedChapter] = useState([]);
   // console.log("completedChapter", completedChapter)
-  console.log("courseInfo in watch course name", courseInfo);
+  console.log("courseInfo in watch course ", courseInfo);
 
   const [activeChapterIndex, setActiveChapterIndex] = useState([]);
 
@@ -26,18 +27,19 @@ const WatchCourse = ({ params }) => {
       user.primaryEmailAddress.emailAddress
     ).then((res) => {
       // Extract completed chapter IDs
-      console.log("userEnrollCourses", res);
       setCompletedChapter(
         res.userEnrollCourses[0].completedChapter.map(
           (completedChapter) => completedChapter.chapterId
         )
       );
-
+      
+      console.log("userEnrollCourses in wc", res);
+      setResp(res);
       setCourseInfo(res.userEnrollCourses[0].courseList[0]);
-      console.log(
-        "Cousreinfo in watch course",
-        res.userEnrollCourses[0].courseList[0]
-      );
+      // console.log(
+      //   "Cousreinfo in watch course",
+      //   res.userEnrollCourses[0].courseList[0]
+      // );
     });
   }, [params, user]);
 
@@ -81,6 +83,7 @@ const WatchCourse = ({ params }) => {
           <div className="md:col-span-1 col-span-2 mt-4 border-2 rounded-[5px] max-h-[578px]">
             <CourseContentSection
               courseInfo={courseInfo}
+              resp={resp}
               isUserAlreadyEnrolled={true}
               watchMode={true}
               completedChapter={completedChapter}
