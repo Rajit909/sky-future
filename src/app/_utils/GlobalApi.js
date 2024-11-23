@@ -140,12 +140,6 @@ const getUserEnrolledCourseDetails = async (id, email) => {
       courseId
       id
       userEmail
-      completedChapter {
-        ... on CompletedChapter {
-          id
-          chapterId
-        }
-      }
       courseList {
         author
         banner {
@@ -174,11 +168,6 @@ const getUserEnrolledCourseDetails = async (id, email) => {
         sourceCode
         totalChapters
       }
-<<<<<<< HEAD
-        installments
-=======
-       installments
->>>>>>> ab7e00e21b438c6055ecd1fb141db01ec0f41e1d
     }
   }  
   `

@@ -10,7 +10,7 @@ const WatchCourse = ({ params }) => {
   const { user } = useUser();
   const [courseInfo, setCourseInfo] = useState([]);
   const [resp, setResp] = useState([]);
-  const [completedChapter, setCompletedChapter] = useState([]);
+  // const [completedChapter, setCompletedChapter] = useState([]);
   // console.log("completedChapter", completedChapter)
   console.log("courseInfo in watch course ", courseInfo);
 
@@ -27,11 +27,11 @@ const WatchCourse = ({ params }) => {
       user.primaryEmailAddress.emailAddress
     ).then((res) => {
       // Extract completed chapter IDs
-      setCompletedChapter(
-        res.userEnrollCourses[0].completedChapter.map(
-          (completedChapter) => completedChapter.chapterId
-        )
-      );
+      // setCompletedChapter(
+      //   res.userEnrollCourses[0].completedChapter.map(
+      //     (completedChapter) => completedChapter.chapterId
+      //   )
+      // );
       
       console.log("userEnrollCourses in wc", res);
       setResp(res);
@@ -43,27 +43,27 @@ const WatchCourse = ({ params }) => {
     });
   }, [params, user]);
 
-  const onChapterCompleted = (chapterId) => {
-    // Check if the chapter is already completed
-    if (completedChapter.includes(chapterId)) {
-      toast("Chapter already marked as completed");
-      console.log("chapter already completed");
-      return;
-    }
+  // const onChapterCompleted = (chapterId) => {
+  //   // Check if the chapter is already completed
+  //   if (completedChapter.includes(chapterId)) {
+  //     toast("Chapter already marked as completed");
+  //     console.log("chapter already completed");
+  //     return;
+  //   }
 
-    GlobalApi.markChapterCompleted(params.enrollId, chapterId).then((res) => {
-      toast("Chapter marked as completed");
-      if (res) {
-        // Update completedChapterIds state with the newly completed chapterId
-        setCompletedChapter((prevCompletedChapterIds) => [
-          ...prevCompletedChapterIds,
-          chapterId,
-        ]);
-        getUserEnrolledCourseDetail(); // Refresh enrolled course details
-        console.log("chapter marked as completed");
-      }
-    });
-  };
+  //   GlobalApi.markChapterCompleted(params.enrollId, chapterId).then((res) => {
+  //     toast("Chapter marked as completed");
+  //     if (res) {
+  //       // Update completedChapterIds state with the newly completed chapterId
+  //       setCompletedChapter((prevCompletedChapterIds) => [
+  //         ...prevCompletedChapterIds,
+  //         chapterId,
+  //       ]);
+  //       getUserEnrolledCourseDetail(); // Refresh enrolled course details
+  //       console.log("chapter marked as completed");
+  //     }
+  //   });
+  // };
 
   return (
     courseInfo.name && (
@@ -86,7 +86,7 @@ const WatchCourse = ({ params }) => {
               resp={resp}
               isUserAlreadyEnrolled={true}
               watchMode={true}
-              completedChapter={completedChapter}
+              // completedChapter={completedChapter}
               setActiveChapterIndex={(index) => setActiveChapterIndex(index)}
             />
             <hr />

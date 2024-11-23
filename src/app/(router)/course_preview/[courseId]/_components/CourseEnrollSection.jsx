@@ -25,6 +25,7 @@ const CourseEnrollSection = ({ courseInfo, isUserAlreadyEnrolled }) => {
 
       if (res) {
         // message
+        
         toast("User Enroll Successfull", {
           description: "Welcome to sky future",
           // action: {
