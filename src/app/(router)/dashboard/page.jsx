@@ -1,6 +1,6 @@
 'use client'
 import React, { useCallback, useEffect, useState } from 'react'
-import SideBanners from '../courses/_components/SideBanners'
+import SideBanners from '../admincourses/_components/SideBanners'
 import WelcomeBannerDashboard from './_components/WelcomeBannerDashboard'
 import { useUser } from '@clerk/nextjs'
 import InProgressCourseList from './_components/InProgressCourseList'
@@ -9,7 +9,7 @@ import GlobalApi from '@/app/_utils/GlobalApi'
 const Dashboard = () => {
   const {user} = useUser();
   const [userEnrolledCourses, setUserEnrolledCourses] = useState([])
-
+courses
   useEffect(()=>{
     user&&getAllUserEnrolledCourses();
   },[user])
