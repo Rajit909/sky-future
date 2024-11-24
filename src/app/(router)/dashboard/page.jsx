@@ -9,7 +9,7 @@ import GlobalApi from '@/app/_utils/GlobalApi'
 const Dashboard = () => {
   const {user} = useUser();
   const [userEnrolledCourses, setUserEnrolledCourses] = useState([])
-courses
+
   useEffect(()=>{
     user&&getAllUserEnrolledCourses();
   },[user])
