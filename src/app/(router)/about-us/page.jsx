@@ -40,7 +40,7 @@ const About = () => {
                   style={{maxHeight: "500px", width: "100%"}}
                 /> 
               </div> */}
-              <div className="max-w-lg" data-aos="fade-up" data-aos-ease="ease-in">
+              <div className="w-full" data-aos="fade-up" data-aos-ease="ease-in">
                 <h2 className=" cursor-pointer text-3xl font-extrabold text-gray-900 sm:text-4xl">
                   About Us
                 </h2>
