@@ -20,7 +20,7 @@ const Payment = () => {
               <div className="rounded-2xl bg-gray-50 py-10 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16">
                 <div className="mx-auto max-w-xs px-2">
                 
-                  <div className="w-full rounded-[8px] bg-indigo-600 p-1  text-center text-sm font-semibold text-white shadow-sm flex justify-center items-center ">
+{/*                   <div className="w-full rounded-[8px] bg-indigo-600 p-1  text-center text-sm font-semibold text-white shadow-sm flex justify-center items-center ">
                     <Image
                       width={100}
                       height={20}
@@ -29,7 +29,7 @@ const Payment = () => {
                       style={{minWidth: "100%"}}
                       />
               
-                  </div>
+                  </div> */}
                   <h2 className="mt-6 text-2xl underline font-bold leading-5 text-gray-800 ">
                    Scan QR
                   </h2>
