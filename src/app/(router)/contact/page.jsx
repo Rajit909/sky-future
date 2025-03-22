@@ -100,8 +100,8 @@ const Contact = () => {
 
                       <h2 className=" pl-4 font-semibold">Contact</h2>
                     </div>
-                    <p className=" text-gray-600 pl-16">+91 9718273445</p>
-                    <p className=" text-gray-600 pl-16">+91 8979381700</p>
+                    <p className=" text-gray-600 pl-16">+91 9690579679</p>
+{/*                     <p className=" text-gray-600 pl-16">+91 8979381700</p> */}
                   </div>
 
                   <div className=" mt-3">
@@ -114,7 +114,7 @@ const Contact = () => {
                       </h2>
                     </div>
                     <p className=" text-gray-600 pl-16">
-                      Mon - Fri: 9:00 AM - 6:00 PM
+                      Mon - Sat: 9:00 AM - 6:00 PM
                     </p>
                   </div>
                   <div className=" mt-3">
